@@ -11,15 +11,15 @@ package aula7;
 public class TarefaAulaSete {
     public static void main(String[] args) {
         // Inicio do programa
-        int n1, n2, n3, n4, soma, media; // declaração
+        int n1, n2, n3, n4; // declaração das 4 variavies inteiras (nesse caso o ideal pe usar uma variavel com ponto flutuante)
         n1 = 10;
-        n2 = 8;
-        n3 = 9;
-        n4 = 7;
+        n2 = 20;
+        n3 = 30;
+        n4 = 55;
         
         // processamento
-        soma = n1 + n2 + n3 + n4; 
-        media = soma / 4;
+        int soma = n1 + n2 + n3 + n4; 
+        int media = soma / 4;
         
         // saída
         System.out.println("--SOMA--");
