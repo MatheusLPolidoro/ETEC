@@ -8,7 +8,7 @@ public class AreaRetangulo {
     public static void main(String[] args) {
         int altura, base, area; // declaração de variáveis
         
-        // entrada de dados (atribuição)
+        // entrada de dados (atribuição de valores para as variáveis)
         altura = 5;
         base = 10;
         
