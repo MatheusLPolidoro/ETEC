@@ -22,7 +22,10 @@ public class AulaNoveAtividade1 {
         altura = entrada.nextInt();
         System.out.print("Informe a base do retangulo: ");
         base = entrada.nextInt();
-        
+
+	// inclusa conforme orientação
+        entrada.close();
+
         // processamento de dados
         area = base * altura;
         
