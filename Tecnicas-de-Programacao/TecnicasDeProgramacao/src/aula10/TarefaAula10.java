@@ -14,6 +14,7 @@ import java.util.Scanner;
  * seus, devendo ser o seu nome real  e os demais dados 
  * podem ser fictícios.
  */
+
 public class TarefaAula10 {
     public static void main(String[] args) {
         // Definição do padrão US de entrada para números flutuantes
@@ -44,7 +45,7 @@ public class TarefaAula10 {
         System.out.println("*********Dados do usúario*********");
         System.out.printf("Nome: %S %n", nome);
         System.out.printf("Estado Civil: %c %n", estadoCivil);
-        System.out.printf("Altura: %f %n", altura);
+        System.out.printf("Altura: %.2f %n", altura);
         System.out.printf("Idade: %d %n", idade);
         System.out.printf("Salário: %.2f %n", salario);
     }
