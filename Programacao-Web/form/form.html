@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Formulario</legend>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        Nome:
+                    </td>
+                    <td>
+                        <!-- size é a quantidade de caracteres -->
+                        <input type="text" name="nome" size="50" placeholder="Digite o seu nome">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Sexo:
+                    </td>
+                    <td>
+                        <input type="radio" name="sexo" value="masculino">Masculino
+                        <input type="radio" name="sexo" value="feminino">Feminino
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        CPF:
+                    </td>
+                    <td>
+                        <input type="number" nome="cpf">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Data de Nascimento:
+                    </td>
+                    <td>
+                        <input type="date" name="data">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Estado:
+                    </td>
+                    <td>
+                        <select name="">
+                            <option value=""></option>
+                            <option value="rj">Rio de Janeiro</option>
+                            <option value="sp">São Paulo</option>
+                            <option value="rs">Rio Grande do Sul</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Imagem:
+                    </td>
+                    <td>
+                        <input type="file" name="imagem">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email:
+                    </td>
+                    <td>
+                        <input type="email" name="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Senha:
+                    </td>
+                    <td>
+                        <input type="password" nome="senha">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mensagem:
+                    </td>
+                    <td>
+                        <textarea name="mensagem" cols="25" rows="5"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Endereço:
+                    </td>
+                    <td>
+                        <input type="text" name="endereco" size="50">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Número da casa:
+                    </td>
+                    <td>
+                        <input type="number" name="numero">   
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Cursos
+                    </td>
+                    <td>
+                        <input type="radio" name="curso" value="ds">Desenvolvimento de Sistemas
+                        <input type="radio" name="curso" value="adm">Administração
+                        <input type="radio" name="curso" value="lg">Logística
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Turma:
+                    </td>
+                    <td>
+                        <select name="turma">
+                            <option value=""></option>
+                            <option value="1semestre">Primeiro Semestre - Tarde</option>
+                            <option value="2semestre">Segundo Semestre - Tarde</option>
+                            <option value="3semestre">Terceiro Semestre - Tarde</option>
+                            <option value="1semestre">Primeiro Semestre - Noite</option>
+                            <option value="2semestre">Segundo Semestre - Noite</option>
+                            <option value="3semestre">Terceiro Semestre - Noite</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="reset" value="Limpar">
+                        <input type="submit" value="Enviar">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+</body>
+</html>
