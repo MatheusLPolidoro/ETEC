@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <h1>Cadastro de clientes</h1>
+    <!-- Dados pessoas -->
+    <fieldset>
+        <table border="0">
+            <form>
+                <legend>
+                    <h2>Dados Pessoais</h2>
+                </legend>
+                <tr>
+                    <td rowspan="5"><img src="Icone_pessoa.png" alt="Perfil" width="70"></td>
+                    <td>Nome: </td>
+                    <td><input type="text" name="nome" id="nome" placeholder="Digite o seu nome" size="50"></td>
+                </tr>
+                <tr>
+                    <td>Nascimento: </td>
+                    <td><input type="date" name="dataNascimento"></td>
+                </tr>
+                <tr>
+                    <td>Sexo: </td>
+                    <td>
+                        <input type="radio" value="masculino" name="sexo">Masculino
+                        <input type="radio" value="feminino" name="sexo">Feminino
+                    </td>
+                </tr>
+                <tr>
+                    <td>Formação: </td>
+                    <td>
+                        <select name="formacao" id="formacao">
+                            <option value=""></option>
+                            <option value="medioCompleto">Ensino Médio Completo</option>
+                            <option value="tecnico">Ensino Técnico</option>
+                            <option value="superior">Superior</option>
+                        </select>
+                    </td>
+                    <td>Formação: </td>
+                    <td>
+                        <select name="profissao" id="profissao">
+                            <option value=""></option>
+                            <option value="administrador">Administrador</option>
+                            <option value="contador">Contador</option>
+                            <option value="desenvolvedor">Desenvolvedor</option>
+                            <option value="corretor">Corretor</option>
+                            <option value="professor">Professor</option>
+                            <option value="engenheiro">Engenheiro</option>
+                            <option value="cozinheiro">Cozinheiro</option>
+                            <option value="motorista">Motorista</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CPF: </td>
+                    <td><input type="number" name="cpf"></td>
+                </tr>
+        </table>
+        </form>
+    </fieldset>
+    <!-- Contato -->
+    <fieldset>
+        <legend>
+            <h2>Contato</h2>
+        </legend>
+        <table border="0">
+            <form>
+                <tr>
+                    <td rowspan="5"><img src="Icone_email.png" alt="email" width="70"></td>
+                    <td>Email: </td>
+                    <td><input type="email" name="email" size="50"></td>
+                </tr>
+                <tr>
+                    <td>Telefone: </td>
+                    <td><input type="number" name="telefone" placeholder="Digite o seu Email"></td>
+                </tr>
+                <tr>
+                    <td>Celular: </td>
+                    <td><input type="number" name="celular"></td>
+                </tr>
+                <tr>
+                    <td>Skype: </td>
+                    <td><input type="text" name="skype"></td>
+                </tr>
+            </form>
+        </table>
+    </fieldset>
+    <!-- Endereço -->
+    <form>
+        <fieldset>
+            <legend>
+                <h2>Endereço</h2>
+            </legend>
+            <table border="0">
+                <form>
+                    <tr>
+                        <td rowspan="5"><img src="Icone_endereco.png" alt="endereco" width="70"></td>
+                        <td>Logradouro: </td>
+                        <td><input type="text" name="logradouro" id="logradouro" size="50"></td>
+                    </tr>
+                    <tr>
+                        <td>Numero: </td>
+                        <td><input type="number" name="numeroEndereco"></td>
+                        <td>Cep: </td>
+                        <td><input type="number" name="cep"></td>
+                    </tr>
+                    <tr>
+                        <td>Bairro: </td>
+                        <td><input type="text" name="bairro"></td>
+                        <td>Cidade: </td>
+                        <td><input type="text" name="cidade"></td>
+                    </tr>
+                    <tr>
+                        <td>Estado: </td>
+                        <td>
+                            <select name="estado" id="estado">
+                                <option value=""></option>
+                                <option value="Acre">AC</option>
+                                <option value="Alagoas">AL</option>
+                                <option value="Amapá">AP</option>
+                                <option value="Amazonas">AM</option>
+                                <option value="Bahia">BA</option>
+                                <option value="Ceará">CE</option>
+                                <option value="DistritoFederal">DF</option>
+                                <option value="EspiritoSanto">ES</option>
+                                <option value="Goias">GO</option>
+                                <option value="Maranhao">MA</option>
+                                <option value="MatoGrosso">MT</option>
+                                <option value="MatoGrossoDoSul">MT</option>
+                                <option value="MinasGerais">MG</option>
+                                <option value="Para">PA</option>
+                                <option value="Paraiba">PB</option>
+                                <option value="Parana">PR</option>
+                                <option value="Pernambuco">PE</option>
+                                <option value="Piaui">PI</option>
+                                <option value="RioDeJaneiro">RJ</option>
+                                <option value="RioGrandeDoNorte">RN</option>
+                                <option value="RioGrandeDoSul">RS</option>
+                                <option value="Rondonia">RO</option>
+                                <option value="Roraima">RR</option>
+                                <option value="SantaCatarina">SC</option>
+                                <option value="SaoPaulo">SP</option>
+                                <option value="Sergipe">SE</option>
+                                <option value="Tocantins">TO</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Complemento: </td>
+                        <td><input type="text" name="complemento" size="50"></td>
+                    </tr>
+                </form>
+            </table>
+        </fieldset>
+        <input type="submit" value="Salvar Cliente">
+        <input type="reset" value="Limpar Dados">
+</body>
+
+</html>
