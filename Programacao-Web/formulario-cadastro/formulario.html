@@ -5,35 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
+    <meta name="author" content="Matheus Polidoro">
+    <meta name="keywords" content="Formulário, HTML, ETEC">
 </head>
 
 <body>
     <h1>Cadastro de clientes</h1>
     <!-- Dados pessoas -->
     <fieldset>
-        <table border="0">
+        <table>
             <form>
                 <legend>
                     <h2>Dados Pessoais</h2>
                 </legend>
                 <tr>
                     <td rowspan="5"><img src="Icone_pessoa.png" alt="Perfil" width="70"></td>
-                    <td>Nome: </td>
-                    <td><input type="text" name="nome" id="nome" placeholder="Digite o seu nome" size="50"></td>
+                    <td><label for="nome">Nome: </label></td>
+                    <td><input type="text" name="nome" id="nome" placeholder="Digite o seu nome" size="50" maxlength="40"></td>
                 </tr>
                 <tr>
-                    <td>Nascimento: </td>
+                    <td><label for="dataNascimento">Nascimento: </label></td>
                     <td><input type="date" name="dataNascimento"></td>
                 </tr>
                 <tr>
-                    <td>Sexo: </td>
+                    <td><label for="sexo">Sexo: </label></td>
                     <td>
                         <input type="radio" value="masculino" name="sexo">Masculino
                         <input type="radio" value="feminino" name="sexo">Feminino
                     </td>
                 </tr>
                 <tr>
-                    <td>Formação: </td>
+                    <td><label for="formacao">Formação: </label></td>
                     <td>
                         <select name="formacao" id="formacao">
                             <option value=""></option>
@@ -42,7 +44,7 @@
                             <option value="superior">Superior</option>
                         </select>
                     </td>
-                    <td>Formação: </td>
+                    <td><label for="profissao">Profissão: </label></td>
                     <td>
                         <select name="profissao" id="profissao">
                             <option value=""></option>
@@ -58,8 +60,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>CPF: </td>
-                    <td><input type="number" name="cpf"></td>
+                    <td><label for="cpf">CPF: </label></td>
+                    <td><input type="number" name="cpf" maxlength="11"></td>
                 </tr>
         </table>
         </form>
@@ -69,24 +71,24 @@
         <legend>
             <h2>Contato</h2>
         </legend>
-        <table border="0">
+        <table>
             <form>
                 <tr>
                     <td rowspan="5"><img src="Icone_email.png" alt="email" width="70"></td>
-                    <td>Email: </td>
-                    <td><input type="email" name="email" size="50"></td>
+                    <td><label for="email">Email: </label></td>
+                    <td><input type="email" name="email" size="50" maxlength="50"></td>
                 </tr>
                 <tr>
-                    <td>Telefone: </td>
-                    <td><input type="tel" name="telefone"></td>
+                    <td><label for="telefone">Telefone: </label></td>
+                    <td><input type="tel" name="telefone" maxlength="12"></td>
                 </tr>
                 <tr>
-                    <td>Celular: </td>
-                    <td><input type="tel" name="celular"></td>
+                    <td><label for="celular">Celular: </label></td>
+                    <td><input type="tel" name="celular" maxlength="13"></td>
                 </tr>
                 <tr>
-                    <td>Skype: </td>
-                    <td><input type="text" name="skype"></td>
+                    <td><label for="skype">Skype: </label></td>
+                    <td><input type="text" name="skype" maxlength="50"></td>
                 </tr>
             </form>
         </table>
@@ -97,27 +99,27 @@
             <legend>
                 <h2>Endereço</h2>
             </legend>
-            <table border="0">
+            <table>
                 <form>
                     <tr>
                         <td rowspan="5"><img src="Icone_endereco.png" alt="endereco" width="70"></td>
-                        <td>Logradouro: </td>
-                        <td><input type="text" name="logradouro" id="logradouro" size="50"></td>
+                        <td><label for="logradouro">Logradouro: </label></td>
+                        <td><input type="text" name="logradouro" id="logradouro" size="50" maxlength="50"></td>
                     </tr>
                     <tr>
-                        <td>Numero: </td>
+                        <td><label for="numeroEndereco">Número: </label></td>
                         <td><input type="number" name="numeroEndereco"></td>
-                        <td>Cep: </td>
+                        <td><label for="cep">Cep: </label></td>
                         <td><input type="number" name="cep"></td>
                     </tr>
                     <tr>
-                        <td>Bairro: </td>
-                        <td><input type="text" name="bairro"></td>
-                        <td>Cidade: </td>
-                        <td><input type="text" name="cidade"></td>
+                        <td><label for="bairro">Bairro: </label></td>
+                        <td><input type="text" name="bairro" maxlength="20"></td>
+                        <td><label for="cidade">Cidade: </label></td>
+                        <td><input type="text" name="cidade" maxlength="20"></td>
                     </tr>
                     <tr>
-                        <td>Estado: </td>
+                        <td><label for="estado">Estado: </label></td>
                         <td>
                             <select name="estado" id="estado">
                                 <option value=""></option>
@@ -152,8 +154,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Complemento: </td>
-                        <td><input type="text" name="complemento" size="50"></td>
+                        <td><label for="complemento">Complemento: </label></td>
+                        <td><input type="text" name="complemento" size="50" maxlength="80"></td>
                     </tr>
                 </form>
             </table>
