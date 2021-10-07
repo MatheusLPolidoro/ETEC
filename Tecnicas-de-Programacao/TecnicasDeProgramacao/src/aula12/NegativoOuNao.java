@@ -14,7 +14,7 @@ public class NegativoOuNao {
             System.out.printf("%nO NÚMERO: %d NÃO É NEGATIVO%n", num);
         }
         else {
-            System.out.printf("%nNÚMERO %d NEGATIVO:%n", num);
+            System.out.printf("%nNÚMERO: %d NEGATIVO%n", num);
         }
     }
 }
