@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos e Funções</title>
+    <script>
+        // defini o nome da imagem para ela não mudar depois de clicar e mover o mouse sobre a imagem novamente
+        let img = "img_2.jpg"
+        function inicio(){
+            img = "img_2.jpg";
+            document.getElementById("imagem").src="img_1.jpg";
+        }
+        function meio(){
+            document.getElementById("imagem").src=img;
+        }
+        function fim(){
+            img = "img_3.jpg"
+            document.getElementById("imagem").src="img_3.jpg";
+        }
+    </script>
+</head>
+<body>
+    <figure align="center">
+        <img id="imagem"src="img_1.jpg" width="300px" onmouseout="inicio()" onmousemove="meio()" onclick="fim()">
+    </figure>
+</body>
+</html>
