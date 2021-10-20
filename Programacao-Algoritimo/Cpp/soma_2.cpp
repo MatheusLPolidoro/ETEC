@@ -7,12 +7,12 @@ int main(){
 	int index;
 
 	for (index = 1; index <= 5 ; index ++){
-		printf("\nDigite o %i ° valor: ", index);
+		printf("\nDigite o %i ï¿½ valor: ", index);
 		scanf("%f", &num);
 		total = total + num;	
 	}
 	
-	printf("\nA soma é igual a %.2f\n", total);
+	printf("\nA soma ï¿½ igual a %.2f\n", total);
 	
 	system("pause");
 }

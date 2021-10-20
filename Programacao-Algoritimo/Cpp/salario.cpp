@@ -8,7 +8,7 @@ int main(){
 	printf("Informe quantas horas por dia você trabalha: ");
 	scanf("%f", &horasPorDia);
 	
-	salario = 50.00 * horasPorDia* 30;
+	salario = 50.00 * horasPorDia * 30;
 	
 	printf("\nO seu salário é de %.2f\n", salario);
 	

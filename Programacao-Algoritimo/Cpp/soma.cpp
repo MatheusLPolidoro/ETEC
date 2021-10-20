@@ -16,7 +16,7 @@ int main(){
 	
 	total = num1 + num2 + num3 + num4;
 	
-	printf("\nA soma é igual a %.2f\n", total);
+	printf("\nA soma Ã© igual a %.2f\n", total);
 	
 	system("pause");
 }

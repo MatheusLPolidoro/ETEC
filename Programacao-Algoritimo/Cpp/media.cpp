@@ -13,7 +13,7 @@ int main(){
 	}
 		
 	media = total / (index - 1);
-	printf("\nA média é igual a %.2f\n", media);
+	printf("\nA média de %.2f é igual a %.2f\n", total, media);
 	system("pause");
 }
 
