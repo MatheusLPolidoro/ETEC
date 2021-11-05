@@ -10,7 +10,7 @@ public class ResultadoDeAluno {
         int nota = entrada.nextInt();
         entrada.close();
         
-        // Estrutura de seleção multipla
+        // Estrutura de seleção multipla Switch
         switch(nota) {
             case 0:case 1:case 2:case 3: 
                 System.out.println("REPROVADO");break;
