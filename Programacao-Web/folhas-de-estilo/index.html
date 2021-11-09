@@ -11,6 +11,16 @@
             atributo: valor;
         }*/
 
+        /* valor initial : a propriedade recebe o valor inicial.
+           valor inherit: a propriedade recebe o valor herdado.
+           valor unset: se for uma propriedade herdada, será tratada como herdar e, se não for, será tratada como inicial.
+        */
+        * {
+            margin: 0px;
+            padding: 0;
+            border: 0;
+        }
+
         body {
             background-color: #24272b;
             font-family: 'Lucida Sans Unicode';
@@ -19,64 +29,212 @@
         }
 
         header {
+            background-color: #23b16a;
             position: fixed;
-            box-sizing: border-box;
-            background-color: #85dd91;
+            text-transform: uppercase;
             z-index: 999;
             top: 0;
             left: 0;
             right: 0;
             height: 70px;
-            padding: 1px 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 75px;
             opacity: 100%;
-              
+            max-width: 90%;
         }
 
-        nav ul li{
-           display: inline-flex;  
-           justify-content: space-between;  
+        ul,
+        ol,
+        li {
+            list-style: none;
         }
 
-        nav ul li a{
-           color: rgb(50, 51, 53);
-              
+        nav ul li {
+            display: inline-flex;
+            margin-right: 5px;
         }
 
-        /* valor initial : a propriedade recebe o valor inicial.
-           valor inherit: a propriedade recebe o valor herdado.
-           valor unset: se for uma propriedade herdada, será tratada como herdar e, se não for, será tratada como inicial.
+        nav ul li a {
+            color: rgb(50, 51, 53);
+            font-size: 24px;
+            transition: all ease 0.2s;
+        }
 
-        */
-        h1, h2, h3, h4, h5, h6{
-            color: #7cb33e;
+        nav ul li a:hover {
+            color: rgb(222, 227, 175);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: sans-serif;
+            color: #f7c46b;
+            padding: 0px 20px;
+        }
+
+        article {
+            padding: 10px 30px 10px 30px;
+            max-width: 90%;
+            margin: 100px 5% 30px 5%;
+            border: 1px solid #23b16a;
+            text-align: justify;
         }
 
         h1 {
-            font-family: sans-serif;
-            /* Pegar a formatação do PAI => h1 */
             font-size: 26px;
+            margin: 20px 0px 0px 0px;
+            color: #28b3bd;
         }
 
         h2 {
-            font-family: sans-serif;
-            /* Pegar a formatação do PAI => section>main>body */
-            font-size: 20px;
-        }
-
-        h3 {
-            font-family: 'Lucida Sans';
+            font-size: 18px;
+            padding: 0px 40px;
         }
 
         p {
             font-family: inherit;
-            /* Pegar a formatação do PAI => section>main>body */
+            /* Pegar a formatação do PAI => body */
+            margin-bottom: 25px;
+            padding: 0px 30px 0px 50px;
         }
 
         a {
             font-size: 32px;
             text-decoration: none;
-            color: #1a221e;
+            color: #23b16a;
         }
+
+        hr {
+            border: 1px solid #23b16a;
+            width: 95%;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            opacity: 20%;
+        }
+
+        /* Flex Container */
+        section {
+            max-width: 90%;
+            margin: 0px auto;
+            display: flex;
+            border: 1px solid #23b16a;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+
+        /* Flex Item */
+        figure {
+            flex: 0;
+            margin: 30px auto;
+            width: 300px;
+            background: rgb(11, 66, 72);
+            text-align: center;
+            font-size: 1.5em;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        section span {
+            position: absolute;
+            text-align: center;
+            color: #a50d0d;
+            background-color: #4052dc39;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 170px;
+            text-shadow: 0.2em 0.1em 0.2em rgba(0, 0, 0, 0.934);
+            border-radius: 10px 10px 0px 0px;
+            padding: 0px 67px 0px 68px;
+            opacity: 0%;
+            transition: all ease 0.5s;
+        }
+
+        section figure img {
+            width: 300px;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        section figure span:hover {
+            opacity: 60%;
+        }
+
+        div {
+            max-width: 400px;
+            margin: 40px auto 40px auto;
+            display: flex;
+            border: 1px solid #23b16a
+        }
+
+        pre {
+            flex: 0;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            text-decoration: underline solid #23b16a25;
+            color: #4eff63;
+            font-size: 16px;
+        }
+
+        fieldset {
+            color: #6bf0ad;
+            border: 1px solid #23b16a;
+            display: flex;
+            margin: 0 auto;
+            max-width: 90%;
+        }
+
+        table,
+        tr,
+        td {
+            flex: 1;
+            border: 1px solid #23b16a;
+            margin: 5px;
+            flex-wrap: wrap;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        input,
+        textarea,
+        button {
+            font-family: sans-serif;
+            font-size: 1em;
+            color: #429d4e;
+            border-radius: 5px;
+        }
+
+        input,
+        select {
+            padding: 0.2em;
+            border: 1px solid #429d4e;
+            box-shadow: 2px 2px 5px rgba(0, 255, 153, 0.144);
+        }
+
+        button {
+            font-size: 1.2em;
+            background: #17ab50;
+            border: 0;
+            margin: 1em 1em 1em 43% ;
+            color: #ffffff;
+            padding: 0.5em 2em;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+            display: inline-block
+        }
+
+        button:hover {
+            color: #380B61;
+            background: #CCBBFF;
+            box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+            text-shadow: none;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 
@@ -85,23 +243,205 @@
         <nav>
             <ul>
                 <li>
-                    <a href="#">Item 1</a>
+                    <a href="#">&#x2302; home</a>
                 </li>
                 <li>
-                    <a href="#">Item 2</a>
+                    <a href="#">&nbsp;&#10004; sobre</a>
                 </li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
                 <li>
-                    <a href="#">Item 3</a>
+                    <a href="#">&#9658;entrar</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <h1>Primeiros passos com CSS H1</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> Velit ratione quibusdam consequuntur tempore
-        perferendis <br>magnam accusantium similique praesentium quo itaque <br>dignissimos, laborum facere consectetur
-        nulla odit dolore<br> id sunt et?</p>
-    <h2>Título de nível dois H2</h2>
-    <a href="#">clique aqui para ser feliz</a>
+    <article>
+        <h1>Capítulo 1</h1>
+        <hr>
+        <h2>Capítulo 1.1</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi doloremque magni eligendi nesciunt,
+            repellendus officiis delectus tenetur quaerat a rerum eius optio. Eveniet minus ducimus eos, velit ut
+            asperiores perferendis!</p>
+        <h2>Capítulo 1.2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis numquam dignissimos facilis alias
+            blanditiis consequuntur voluptates nesciunt nostrum eum beatae. Quia, dolores illo iure expedita asperiores
+            similique facere numquam nam.</p>
+        <h1>Capítulo 2</h1>
+        <hr>
+        <h2>Capítulo 2.1</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, dolores molestias ratione officiis
+            voluptatum rerum cupiditate veritatis autem, quisquam omnis architecto minima sed maiores cumque fuga amet
+            saepe modi ea.</p>
+    </article>
+    <section>
+        <figure>
+            <span>&#10084;</span>
+            <img src="images/Tobey-Maguire-1200x900.jpg" alt="Tobey Maguire">
+            <figcaption>Tobey Maguire</figcaption>
+        </figure>
+        <figure>
+            <span>&#10084;</span>
+            <img src="images/andrew-garfield.jpg" alt="Andrew Garfield">
+            <figcaption>Andrew Garfield</figcaption>
+        </figure>
+        <figure>
+            <span>&#10084;</span>
+            <img src="images/Tom-Holland-1200x900-1.jpg" alt="Tom Holland">
+            <figcaption>Tom Holland</figcaption>
+        </figure>
+    </section>
+
+    <div>
+        <pre>
+        //algorithm of Success
+        while (noSuccess)
+        {
+            tryAgain();
+            if (Dead)
+                break;
+        }</pre>
+    </div>
+
+    <!-- tabela e formulario -->
+    <!-- dados pessoais -->
+    <fieldset>
+        <table>
+            <form>
+                <legend>
+                    <h2>Dados Pessoais</h2>
+                </legend>
+                <tr>
+                    <td rowspan="6" align="center" style="font-size: 100px;">&#x1F9D1</td>
+                    <td><label for="nome">Nome: </label></td>
+                    <td><input type="text" name="nome" id="nome" placeholder="Digite o seu nome" size="30"
+                            maxlength="30"></td>
+                </tr>
+                <tr>
+                    <td><label for="dataNascimento">Nascimento: </label></td>
+                    <td><input type="date" name="dataNascimento"></td>
+                </tr>
+                <tr>
+                    <td><label for="sexo">Sexo: </label></td>
+                    <td>
+                        <input type="radio" value="masculino" name="sexo">Masculino
+                        <input type="radio" value="feminino" name="sexo">Feminino
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="formacao">Formação: </label></td>
+                    <td>
+                        <select name="formacao" id="formacao">
+                            <option value=""></option>
+                            <option value="medioCompleto">Ensino Médio Completo</option>
+                            <option value="tecnico">Ensino Técnico</option>
+                            <option value="superior">Superior</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="profissao">Profissão: </label></td>
+                    <td>
+                        <select name="profissao" id="profissao">
+                            <option value=""></option>
+                            <option value="administrador">Administrador</option>
+                            <option value="contador">Contador</option>
+                            <option value="desenvolvedor">Desenvolvedor</option>
+                            <option value="corretor">Corretor</option>
+                            <option value="professor">Professor</option>
+                            <option value="engenheiro">Engenheiro</option>
+                            <option value="cozinheiro">Cozinheiro</option>
+                            <option value="motorista">Motorista</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="cpf">CPF: </label></td>
+                    <td><input type="number" name="cpf" maxlength="11"></td>
+                </tr>
+                <tr>
+                    <td rowspan="4" align="center" style="font-size: 100px;">&#x1F4E7</td>
+                    <td><label for="email">Email: </label></td>
+                    <td><input type="email" name="email" size="30" maxlength="30"></td>
+                </tr>
+                <tr>
+                    <td><label for="telefone">Telefone: </label></td>
+                    <td><input type="tel" name="telefone" maxlength="12"></td>
+                </tr>
+                <tr>
+                    <td><label for="celular">Celular: </label></td>
+                    <td><input type="tel" name="celular" maxlength="13"></td>
+                </tr>
+                <tr>
+                    <td><label for="skype">Skype: </label></td>
+                    <td><input type="text" name="skype" maxlength="50"></td>
+                </tr>
+                <tr>
+                    <td rowspan="7" align="center" style="font-size: 100px;">&#x1F3E0</td>
+                    <td><label for="logradouro">Logradouro: </label></td>
+                    <td><input type="text" name="logradouro" id="logradouro" size="30" maxlength="50"></td>
+                </tr>
+                <tr>
+                    <td><label for="numeroEndereco">Número: </label></td>
+                    <td><input type="number" name="numeroEndereco"></td>
+                </tr>
+                <tr>
+                    <td><label for="cep">Cep: </label></td>
+                    <td><input type="number" name="cep"></td>
+                </tr>
+                <tr>
+                    <td><label for="cidade">Cidade: </label></td>
+                    <td><input type="text" name="cidade" maxlength="20"></td>
+                </tr>
+                <tr>
+                    <td><label for="bairro">Bairro: </label></td>
+                    <td><input type="text" name="bairro" maxlength="20"></td>
+                </tr>
+                <tr>
+                    <td><label for="estado">Estado: </label></td>
+                    <td>
+                        <select name="estado" id="estado">
+                            <option value=""></option>
+                            <option value="Acre">AC</option>
+                            <option value="Alagoas">AL</option>
+                            <option value="Amapá">AP</option>
+                            <option value="Amazonas">AM</option>
+                            <option value="Bahia">BA</option>
+                            <option value="Ceará">CE</option>
+                            <option value="DistritoFederal">DF</option>
+                            <option value="EspiritoSanto">ES</option>
+                            <option value="Goias">GO</option>
+                            <option value="Maranhao">MA</option>
+                            <option value="MatoGrosso">MT</option>
+                            <option value="MatoGrossoDoSul">MT</option>
+                            <option value="MinasGerais">MG</option>
+                            <option value="Para">PA</option>
+                            <option value="Paraiba">PB</option>
+                            <option value="Parana">PR</option>
+                            <option value="Pernambuco">PE</option>
+                            <option value="Piaui">PI</option>
+                            <option value="RioDeJaneiro">RJ</option>
+                            <option value="RioGrandeDoNorte">RN</option>
+                            <option value="RioGrandeDoSul">RS</option>
+                            <option value="Rondonia">RO</option>
+                            <option value="Roraima">RR</option>
+                            <option value="SantaCatarina">SC</option>
+                            <option value="SaoPaulo">SP</option>
+                            <option value="Sergipe">SE</option>
+                            <option value="Tocantins">TO</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="complemento">Complemento: </label></td>
+                    <td><input type="text" name="complemento" size="30" maxlength="80"></td>
+                </tr>
+            </form>
+        </table>
+    </fieldset>
+    <button type="button">Enviar</button>
 </body>
 
 </html>
