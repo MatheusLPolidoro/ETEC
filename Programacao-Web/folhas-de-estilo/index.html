@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" cKontent="width=device-width, initial-scale=1.0">
@@ -9,26 +10,98 @@
             atributo: valor;
             atributo: valor;
         }*/
-        body{
+
+        body {
             background-color: #24272b;
-            font-family: Arial;
+            font-family: 'Lucida Sans Unicode';
+            font-weight: normal;
             color: #d9dee0;
         }
-        h1{
-            font-size: 24px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: blanchedalmond;
+
+        header {
+            position: fixed;
+            box-sizing: border-box;
+            background-color: #85dd91;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            padding: 1px 80px;
+            opacity: 100%;
+              
         }
-        a{
+
+        nav ul li{
+           display: inline-flex;  
+           justify-content: space-between;  
+        }
+
+        nav ul li a{
+           color: rgb(50, 51, 53);
+              
+        }
+
+        /* valor initial : a propriedade recebe o valor inicial.
+           valor inherit: a propriedade recebe o valor herdado.
+           valor unset: se for uma propriedade herdada, será tratada como herdar e, se não for, será tratada como inicial.
+
+        */
+        h1, h2, h3, h4, h5, h6{
+            color: #7cb33e;
+        }
+
+        h1 {
+            font-family: sans-serif;
+            /* Pegar a formatação do PAI => h1 */
+            font-size: 26px;
+        }
+
+        h2 {
+            font-family: sans-serif;
+            /* Pegar a formatação do PAI => section>main>body */
+            font-size: 20px;
+        }
+
+        h3 {
+            font-family: 'Lucida Sans';
+        }
+
+        p {
+            font-family: inherit;
+            /* Pegar a formatação do PAI => section>main>body */
+        }
+
+        a {
             font-size: 32px;
             text-decoration: none;
-            color: #d9dee0;
+            color: #1a221e;
         }
     </style>
 </head>
+
 <body>
-    <h1>Primeiros passos com CSS</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> Velit ratione quibusdam consequuntur tempore perferendis <br>magnam accusantium similique praesentium quo itaque <br>dignissimos, laborum facere consectetur nulla odit dolore<br> id sunt et?</p>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Item 1</a>
+                </li>
+                <li>
+                    <a href="#">Item 2</a>
+                </li>
+                <li>
+                    <a href="#">Item 3</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Primeiros passos com CSS H1</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> Velit ratione quibusdam consequuntur tempore
+        perferendis <br>magnam accusantium similique praesentium quo itaque <br>dignissimos, laborum facere consectetur
+        nulla odit dolore<br> id sunt et?</p>
+    <h2>Título de nível dois H2</h2>
     <a href="#">clique aqui para ser feliz</a>
 </body>
+
 </html>
