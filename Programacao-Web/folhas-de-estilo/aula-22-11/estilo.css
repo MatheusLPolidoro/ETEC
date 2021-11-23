@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@900&display=swap');
+body{
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.principal{
+    background-color: #c3c3c3;
+    width: 800px;
+    height: 800px;
+    /* centralizar a página */
+    margin: 0 auto; 
+}
+
+.topo{
+    background-color: #fda987;
+    width: 800px;
+    height: 150px;
+    align-items: center;
+    display: flex;
+    background-image: linear-gradient(rgb(223, 113, 113),rgb(138, 157, 241));
+    
+}
+
+.logo{
+    font-family: 'Lobster', cursive;
+    background-color: #d3d6129f;
+    width: 300px;
+    height: 50px;
+    float: left;
+    font-size: 35px;
+    color: rgb(85, 66, 66);
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    border-radius: 10px 10px;
+}
+
+.banner{
+    width: 700px;
+    height: 150px;
+    float: left;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #6d2222;
+    font-size: 40px;
+}
+
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.login{
+    background-color: #b087fd;
+    width: 180px;
+    height: 50px;
+    float: left;
+    font-size: 20px;
+    justify-content: center;
+    display: flex;
+    padding: 30px 10px 0px 0px;
+    color: #fff;
+}
+
+.login span{
+    font-size: 35px;
+    transform: translatey(-15px);
+}
+
+
+
+.menu{
+    background-color: #000;
+    width: 800px;
+    height: 50px;
+}
+
+.conteudo{
+    background-color: #d1d2d3;
+    width: 800px;
+    height: 550px;
+}
+
+.box1{
+    background-color: #874301;
+    width: 400px;
+    height: 275px;
+    float: left;
+}
+.box2{
+    background-color: #f19940;
+    width: 400px;
+    height: 275px;
+    float: left;
+}
+.box3{
+    background-color: #32e941;
+    width: 400px;
+    height: 275px;
+    float: left;
+}
+.box4{
+    background-color: #1421cc;
+    width: 400px;
+    height: 275px;
+    float: left;
+}
+
+.rodape{
+    background-color: #000;
+    width: 800px;
+    height: 50px;
+}
+
+
