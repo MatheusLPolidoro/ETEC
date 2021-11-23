@@ -5,6 +5,13 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+ul, li, a{
+    list-style: none;
+    text-decoration: none;
+    color: #fff9aad2;
+    margin: 0;
+    padding: 0;
+}
 .principal{
     background-color: #c3c3c3;
     width: 800px;
@@ -19,53 +26,67 @@ body{
     height: 150px;
     align-items: center;
     display: flex;
-    background-image: linear-gradient(rgb(223, 113, 113),rgb(138, 157, 241));
-    
+    background-image: radial-gradient(circle at center, #faf0a5,#faed8d 50%,#e2d35a 80%, #d3bd13);
 }
 
 .logo{
     font-family: 'Lobster', cursive;
-    background-color: #d3d6129f;
-    width: 300px;
+    background-color: #82f8689f;
+    width: 200px;
     height: 50px;
-    float: left;
     font-size: 35px;
-    color: rgb(85, 66, 66);
-    text-align: center;
+    color: #720000ec;
     justify-content: center;
     margin: 10px;
     border-radius: 10px 10px;
+    padding-right: 7px;
+    border: 5px solid #00000043;
 }
 
 .banner{
-    width: 700px;
-    height: 150px;
-    float: left;
-    overflow: hidden;
+    font-family: 'Lobster', cursive;
+    width: 450px;
+    height: 80px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    text-align: center;
     color: #6d2222;
-    font-size: 40px;
+    font-size: 35px;
+    background-image: linear-gradient(#9109bb00, #f7c00c69);
+    border-radius: 100px 100px 100px 100px;
+    padding-top: 45px;
+    text-shadow: -1px -1px 0px #f8f8f8aa;
 }
 
-.banner img{
-    width: 100%;
-    height: 100%;
+.animation{
+    animation: salto 2s infinite reverse;
 }
 
+@keyframes salto {
+    0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+}
 
 .login{
-    background-color: #b087fd;
-    width: 180px;
-    height: 50px;
+    background-color: #00822b;
+    width: 150px;
+    height: 35px;
     float: left;
-    font-size: 20px;
+    font-size: 16px;
     justify-content: center;
     display: flex;
-    padding: 30px 10px 0px 0px;
-    color: #fff;
+    padding: 15px 10px 0px 0px;
+    color: #effdf4;
+    margin: 10px;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.login:hover{
+    background-color: #1421cc;
 }
 
 .login span{
@@ -73,18 +94,63 @@ body{
     transform: translatey(-15px);
 }
 
-
-
 .menu{
-    background-color: #000;
+    background-color: #212121;
     width: 800px;
     height: 50px;
+    display: flex;
+}
+
+.unordered{
+    display: flex;
+    flex: 1;
+    text-align: center;
+}
+
+.item{
+    flex: 1;
+    display: inline-block;
+    padding-top: 15px;
+    border: 1px solid #fff9aad2;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.item:hover{
+    background-color: #1421cc;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    text-align: left;
+    background-color: #212121;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px #212121;
+    margin-top: 15px;
+    z-index: 1;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content a {
+    flex: 1;
+    padding: 10px;
+    transition: all ease .2s;
+}
+
+.dropdown-content a:hover{
+    background-color: #1421cc;
 }
 
 .conteudo{
     background-color: #d1d2d3;
     width: 800px;
     height: 550px;
+    overflow: hidden;
 }
 
 .box1{
@@ -92,30 +158,103 @@ body{
     width: 400px;
     height: 275px;
     float: left;
+    animation: primeiro 15s infinite forwards;
 }
 .box2{
-    background-color: #f19940;
+    background-color: #8004a5;
     width: 400px;
     height: 275px;
     float: left;
+    animation: segundo 15s infinite forwards;
 }
 .box3{
     background-color: #32e941;
     width: 400px;
     height: 275px;
     float: left;
+    animation: quarto 15s infinite forwards;
 }
 .box4{
-    background-color: #1421cc;
+    background-color: #50e6f7;
     width: 400px;
     height: 275px;
     float: left;
+    display: flex;
+    animation: terceiro 15s infinite forwards;
+}
+
+.box1:hover, 
+.box2:hover, 
+.box3:hover, 
+.box4:hover{
+    background-image:radial-gradient(#faed8d,#d3bd13);
+    animation-play-state: paused;
+}
+
+.box1:hover .texto,.box2:hover .texto,.box3:hover .texto,.box4:hover .texto{
+    color: #023a1e;
+}
+
+@keyframes primeiro{
+    10%,10% {
+        background-color: #a3033b;
+    }
+}
+@keyframes segundo{
+    40%,40% {
+        background-color: #03a353;
+    }
+}
+@keyframes terceiro{
+    70%,70% {
+        background-color: #a3039e;
+    }
+}
+@keyframes quarto{
+    100%,100% {
+        background-color: #037ea3;
+    }
+}
+
+.texto{
+    position: absolute;
+    font-size: 60px;
+    color: #ffffff;
+    transform: translate(-40px, 100px);
+    font-family: 'Lobster', cursive;
+}
+
+.transforme{
+    transform: translate(-80px, -5px);
+}
+
+.transforme2{
+    transform: translate(250px, -5px);
+}
+
+.padding{
+    padding:65px 20px 20px 20px;
 }
 
 .rodape{
-    background-color: #000;
+    background-color: #212121;
     width: 800px;
     height: 50px;
+    display: flex;
 }
 
+.texto-rodape{
+    flex: 1;
+    color: #fff9aad2;
+    padding: 10px;
+    text-align: center;
+}
 
+.filtro{
+    filter: invert(100%);
+    transform: translateX(40px);
+}
+
+.filtro img{
+    margin-left: 10px;
+}
