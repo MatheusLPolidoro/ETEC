@@ -1,7 +1,8 @@
-# Desenvolvimento Web
+<body style="background-color:#212121;">
+<h1>Desenvolvimento Web</h1>
 Prática de HTML5, CSS3 e Javascript ✔
 <hr>
-<ul style="background-color:#212121;">
+<ul>
   <li>
     <a href="https://matheuslpolidoro.github.io/ETEC/Programacao-Web/Turma-do-Chaves/">TURMA DO CHAVES</a>
   </li>
@@ -52,3 +53,4 @@ Prática de HTML5, CSS3 e Javascript ✔
   <img src="https://avatars.githubusercontent.com/u/89528428?s=400&u=8daaa0a3a5cb3d2cb816fbe6ad5d5b4d1b31169b&v=4" width="200" alt="Image do Matheus Polidoro">
   </br>🧑🏼 <a href="https://github.com/MatheusLPolidoro"> Matheus Polidoro</a>
 </p>
+</body>
