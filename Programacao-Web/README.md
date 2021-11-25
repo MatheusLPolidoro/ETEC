@@ -1,5 +1,53 @@
 # Desenvolvimento Web
-![Pet-Show2](https://user-images.githubusercontent.com/89528428/143091381-8b27d684-0050-4b5f-9b92-666653480ffd.gif)
+Prática de HTML5, CSS3 e Javascript ✔
+<hr>
+<ul>
+  <li>
+    <a href="https://matheuslpolidoro.github.io/ETEC/Programacao-Web/Turma-do-Chaves/">TURMA DO CHAVES</a>
+  </li>
+  <li>
+    <a href="https://matheuslpolidoro.github.io/ETEC/Programacao-Web/exercicio_carrossel/Glider.js-master_aula_2510/">CARROSEL - Glider-JS</a><br>
+  </li>
+  <li>
+    <a href="https://matheuslpolidoro.github.io/ETEC/Programacao-Web/exercicio_carrossel/wowSlider_aula_2510/">CARROSEL - WOWSlider</a><br>
+  </li>
+  <li>
+    <a href="https://matheuslpolidoro.github.io/ETEC/Programacao-Web/form/">FORMULARIO BÁSICO</a>
+  </li>
+  <li>
+    <a href="https://matheuslpolidoro.github.io/ETEC/Programacao-Web/exercicio_javaScript/">JAVASCRIPT - EVENTOS E FUNÇÕES</a>
+  </li>
+  <li>
+    <a href="https://matheuslpolidoro.github.io/ETEC/Programacao-Web/formulario-cadastro/">FORMULARIO COM IMAGENS</a>
+  </li>
+  
+  <li>
+    <a href="https://matheuslpolidoro.github.io/ETEC/Programacao-Web/links/index.html">LINKS INTERNOS E EXTERNOS</a>
+  </li>
+  <li>
+    <a href="https://matheuslpolidoro.github.io/ETEC/Programacao-Web/mesclagem-de-celulas/">TABELAS - MESCLAGEM DE CELULAS</a>
+  </li>
+  <li>
+    <a href="https://matheuslpolidoro.github.io/ETEC/Programacao-Web/receita-de-bolo/">LISTAS ORDENADAS E LISTAS DESORDENADAS</a>
+  </li>
+  <li>
+    <a href="https://matheuslpolidoro.github.io/ETEC/Programacao-Web/tabela/">TABELA SIMPLES</a>
+  </li>
+  <li>
+    <a href="https://matheuslpolidoro.github.io/ETEC/Programacao-Web/folhas-de-estilo/">CSS - TOPO, CONTEUDO E RODAPÉ</a><br>
+    <img width="300px" src="https://user-images.githubusercontent.com/89528428/143485135-67aa0217-a032-4f9a-965b-0d3b97a84b7a.png"></img>
+  </li> 
+  <li>
+    <a href="https://matheuslpolidoro.github.io/ETEC/Programacao-Web/folhas-de-estilo/aula-22-11/">PET SHOW</a><br>
+    <img width="300px" src="https://user-images.githubusercontent.com/89528428/143091381-8b27d684-0050-4b5f-9b92-666653480ffd.gif"></img>
+  </li>
+ </ul>
+
+
+
+
+
+
 </br>
 
 ## 👨🏼‍💻AUTOR
