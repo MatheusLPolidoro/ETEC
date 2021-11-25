@@ -11,7 +11,7 @@ public class Signo {
 
         System.out.print("Informe o dia: ");
         dia = entrada.nextInt();
-        System.out.print("Informe o mes: ");
+        System.out.print("Informe o mês: ");
         mes = entrada.nextInt();
         msg = "";
         
@@ -30,11 +30,11 @@ public class Signo {
         else if (mes == 9 && dia >= 23 || mes == 10 && dia <= 22)
             msg = "libra";
         else if (mes == 10 && dia >= 23 || mes == 11 && dia <= 21)
-            msg = "esc||piao";
+            msg = "escorpião";
         else if (mes == 11 && dia >= 22 || mes == 12 && dia <= 21)
             msg = "sagitario";
         else if (mes == 12 && dia >= 22 || mes == 1 && dia <= 19)
-            msg = "capric||nio";
+            msg = "capricornio";
         else if (mes == 1 && dia >= 20 || mes == 2 && dia <= 18)
             msg = "aquario";
         else if (mes == 2 && dia >= 19 || mes == 3 && dia <= 20)
