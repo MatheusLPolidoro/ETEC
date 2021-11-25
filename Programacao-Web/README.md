@@ -1,7 +1,7 @@
-<body style="background-color:#212121;">
+<body style="background-color:#212121;color:#fff;text-decoration: none;">
 <h1>Desenvolvimento Web</h1>
-Prática de HTML5, CSS3 e Javascript ✔
-<hr>
+  <p>Prática de HTML5, CSS3 e Javascript ✔</p>
+  <hr>
 <ul>
   <li>
     <a href="https://matheuslpolidoro.github.io/ETEC/Programacao-Web/Turma-do-Chaves/">TURMA DO CHAVES</a>
@@ -21,7 +21,6 @@ Prática de HTML5, CSS3 e Javascript ✔
   <li>
     <a href="https://matheuslpolidoro.github.io/ETEC/Programacao-Web/formulario-cadastro/">FORMULARIO COM IMAGENS</a>
   </li>
-  
   <li>
     <a href="https://matheuslpolidoro.github.io/ETEC/Programacao-Web/links/index.html">LINKS INTERNOS E EXTERNOS</a>
   </li>
