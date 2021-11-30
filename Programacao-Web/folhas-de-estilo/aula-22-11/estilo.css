@@ -109,14 +109,20 @@ ul, li, a{
 
 .item{
     flex: 1;
-    display: inline-block;
-    padding-top: 15px;
+    display: flex;
+}
+
+.item a{
+    display: flex;
+    flex: 1;
     border: 1px solid #fff9aad2;
-    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     transition: all ease .3s;
 }
 
-.item:hover{
+.item a:hover{
     background-color: #1421cc;
 }
 
@@ -127,7 +133,7 @@ ul, li, a{
     background-color: #212121;
     min-width: 200px;
     box-shadow: 0px 8px 16px 0px #212121;
-    margin-top: 15px;
+    margin-top: 3.5vw;
     z-index: 1;
 }
   
