@@ -15,29 +15,29 @@ create table usuario
  ser feita por meio de alteração de tabela*/
  
  -- excluir a chave primaria da coluna cpf
- alter table usuario drop primary key;
+alter table usuario drop primary key;
  
  -- incluir uma chave do tipo unique no cpf
- alter table usuario add constraint uqcpf unique (cpf);
+alter table usuario add constraint uqcpf unique (cpf);
  
  -- alterar tabela criando uma coluna nova com a chave primaria
- alter table usuario add idUsuario int auto_increment primary key;
+alter table usuario add idUsuario int auto_increment primary key;
  
  -- COMANDO INSERT INTO para inserir valores (DML)
- insert into usuario (nome, cpf, login, senha)
- values("MARIA LEOPOLDINA", "12345678900", "maria@123", 123456); 
+insert into usuario (nome, cpf, login, senha)
+values("MARIA LEOPOLDINA", "12345678900", "maria@123", 123456); 
  
- select nome, cpf, login, senha, idUsuario from usuario;
- select nome from usuario;
- select * from usuario;
+select nome, cpf, login, senha, idUsuario from usuario;
+select nome from usuario;
+select * from usuario;
  
- insert into usuario (nome, cpf, login, senha)
- values("JOÃO DE BARRO", "12345678910", "joao@123", 12); 
+insert into usuario (nome, cpf, login, senha)
+values("JOÃO DE BARRO", "12345678910", "joao@123", 12); 
  
  -- criando nova tabela
- create	table registraAcesso (
+create	table registraAcesso (
 	dataAcesso date not null,
-    horario time not null,
+	horario time not null,
 	idAcesso int auto_increment not null primary key
  );
  
@@ -59,6 +59,31 @@ alter table conta modify statusConta bit not null;
 alter table conta add cpf char(11) not null primary key;
 alter table conta add constraint fkUserConta foreign key(cpf) references usuario(cpf);
  
-drop table conta;
 desc conta;
- 
+
+-- AULA 11-03
+
+create table pagina(
+	url varchar(70) not null unique,
+    idPagina int auto_increment not null primary key
+);
+
+create table acessoUsuario(
+	dataAcesso datetime not null,
+    dataSaida datetime not null,
+    idControle int auto_increment not null primary key,
+    cpf char(11) not null,
+    idPagina int,
+    constraint fkcpf foreign key (cpf)
+    references usuario (cpf),
+    constraint	fkidPagina foreign key (idPagina)
+    references pagina (idPagina)
+);
+
+select `engine` from information_schema.tables
+where table_schema="login" AND table_name = "pagina";
+
+alter TABLE pagina ENGINE=InnoDB;
+alter table usuario ENGINE=InnoDB;
+alter table  acessoUsuario ENGINE=InnoDB;
+alter table  conta ENGINE=InnoDB;
