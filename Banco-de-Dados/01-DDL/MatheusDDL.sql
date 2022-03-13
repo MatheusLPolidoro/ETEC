@@ -1,9 +1,9 @@
 /*	
 	Banco de dados II
 	Modelo de Negócio: Oficina Mecânica
-    Professora: Ângela Silva
+    	Professora: Ângela Silva
 	Aluno: Matheus Polidoro
-    DDL - Data Definition Linguage
+    	DDL - Data Definition Linguage
 */
 
 -- criação do banco se ele não existe
@@ -25,18 +25,18 @@ drop table if exists revisa;
 create table if not exists mecanico
 (
 	nome varchar(50) not null,
-    endereco varchar(100) not null,
-    celular varchar(11),
-    cpf char(11) not null unique,
-    crea char(5) not null primary key
+	endereco varchar(100) not null,
+    	celular varchar(11),
+    	cpf char(11) not null unique,
+    	crea char(5) not null primary key
 )ENGINE=InnoDB;
 
 create table if not exists cliente
 (
 	nome varchar(30) not null,
-    endereco varchar(100) not null,
-    telefone char(10),
-    cnh char(11) not null primary key
+    	endereco varchar(100) not null,
+    	telefone char(10),
+    	cnh char(11) not null primary key
 )ENGINE=InnoDB;
 
 -- relacionamento de veiculo e veiculo pesado 1 : 1
@@ -45,34 +45,34 @@ create table if not exists veiculo
 (
 	placa char(7) not null primary key,
 	anoFabricacao char(4),
-    ranavan char(9) not null,
-    modelo varchar(30) not null, 
-    marca varchar(30) not null,
-    cnh char(11) not null,
-    constraint fkCnh foreign key (cnh)
-    references cliente (cnh)
+    	ranavan char(9) not null,
+    	modelo varchar(30) not null, 
+    	marca varchar(30) not null,
+    	cnh char(11) not null,
+    	constraint fkCnh foreign key (cnh)
+    	references cliente (cnh)
 )ENGINE=InnoDB;
 
 -- tabela especialista
 create table if not exists veiculoPesado
 (
 	comprimentoMetro decimal(2, 2) not null,
-    numEixo int not null,
+    	numEixo int not null,
 	pesoTonelada decimal(3, 2) not null,
-    placa char(7) not null unique,
-    constraint fkPlaca foreign key (placa)
-    references veiculo (placa)
+    	placa char(7) not null unique,
+    	constraint fkPlaca foreign key (placa)
+    	references veiculo (placa)
 )ENGINE=InnoDB;
 
 create table if not exists revisa
 (
 	idRevisao int auto_increment not null primary key,
 	dataRevisao datetime not null,
-    valor decimal not null,
-    relatorio varchar(100),
-    placa char(7) not null,
+    	valor decimal not null,
+    	relatorio varchar(100),
+    	placa char(7) not null,
 	crea char(5) not null,    
-    index (dataRevisao)
+    	index (dataRevisao)
 )ENGINE=InnoDB;
 
 alter table revisa add constraint fkPlacaRevisa foreign key (placa) references veiculo (placa);
