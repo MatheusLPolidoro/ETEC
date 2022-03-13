@@ -1,0 +1,6 @@
+C:\Users\manager\Desktop\aula02\PositivoouNegativo\PositivoouNegativo\bin\Debug\PositivoouNegativo.exe.config
+C:\Users\manager\Desktop\aula02\PositivoouNegativo\PositivoouNegativo\bin\Debug\PositivoouNegativo.exe
+C:\Users\manager\Desktop\aula02\PositivoouNegativo\PositivoouNegativo\bin\Debug\PositivoouNegativo.pdb
+C:\Users\manager\Desktop\aula02\PositivoouNegativo\PositivoouNegativo\obj\Debug\PositivoouNegativo.csprojAssemblyReference.cache
+C:\Users\manager\Desktop\aula02\PositivoouNegativo\PositivoouNegativo\obj\Debug\PositivoouNegativo.exe
+C:\Users\manager\Desktop\aula02\PositivoouNegativo\PositivoouNegativo\obj\Debug\PositivoouNegativo.pdb

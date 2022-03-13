@@ -1,0 +1,6 @@
+C:\Users\manager\Desktop\aula02\MultaPeixe\MultaPeixe\bin\Debug\MultaPeixe.exe.config
+C:\Users\manager\Desktop\aula02\MultaPeixe\MultaPeixe\bin\Debug\MultaPeixe.exe
+C:\Users\manager\Desktop\aula02\MultaPeixe\MultaPeixe\bin\Debug\MultaPeixe.pdb
+C:\Users\manager\Desktop\aula02\MultaPeixe\MultaPeixe\obj\Debug\MultaPeixe.csprojAssemblyReference.cache
+C:\Users\manager\Desktop\aula02\MultaPeixe\MultaPeixe\obj\Debug\MultaPeixe.exe
+C:\Users\manager\Desktop\aula02\MultaPeixe\MultaPeixe\obj\Debug\MultaPeixe.pdb
