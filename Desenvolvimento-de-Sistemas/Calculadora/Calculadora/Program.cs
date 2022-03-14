@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,16 +34,16 @@ namespace Calculadora
                 switch (op)
                 {
                     case 1:
-                        Console.WriteLine($"{n1} + {n2} = {n1 + n2}");
+                        Console.WriteLine($"{n1.ToString("n")} + {n2.ToString("n")} = {(n1 + n2).ToString("n")}");
                         break;
                     case 2:
-                        Console.WriteLine($"{n1} - {n2} = {n1 - n2}");
+                        Console.WriteLine($"{n1.ToString("n")} - {n2.ToString("n")} = {(n1 - n2).ToString("n")}");
                         break;
                     case 3:
-                        Console.WriteLine($"{n1} X {n2} = {n1 * n2}");
+                        Console.WriteLine($"{n1.ToString("n")} x {n2.ToString("n")} = {(n1 * n2).ToString("n")}");
                         break;
                     case 4:
-                        Console.WriteLine($"{n1} ÷ {n2} = {n1 / n2}");
+                        Console.WriteLine($"{n1.ToString("n")} ÷ {n2.ToString("n")} = {(n1 / n2).ToString("n")}");
                         break;
                     case 5:
                         Console.WriteLine("Saindo...");
@@ -52,7 +52,8 @@ namespace Calculadora
                         Console.WriteLine("Opção inválida!Digite novamente");                        
                         break;
                 }
-
+                Console.ReadKey();
+                Console.Clear();
             } while (op != 5);
 
             Console.ReadKey();
