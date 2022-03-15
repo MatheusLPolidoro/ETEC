@@ -55,9 +55,6 @@ namespace Calculadora
                 Console.ReadKey();
                 Console.Clear();
             } while (op != 5);
-
-            Console.ReadKey();
-
         }
     }
 }
