@@ -25,32 +25,66 @@ namespace Calculadora
                     Console.WriteLine("2 - Subtrair");
                     Console.WriteLine("3 - Multiplicar");
                     Console.WriteLine("4 - Dividir");
-                    Console.WriteLine("5 - Exponenciação");
-                    Console.WriteLine("6 - Raiz Quadrada");
-                    Console.WriteLine("7 - Resto da divisão");
-                    Console.WriteLine("8 - Porcentagem");
-                    Console.WriteLine("9 - Sair");
+                    Console.WriteLine("5 - Sair");
+
                     op = Console.ReadLine();
+
                     if (Regex.IsMatch(op, @"^[0-9]+$"))
                     {
                         break;
                     }
                     else
                     {
-                        Console.WriteLine("Opção inválida, informe um número! ");
+                        Console.WriteLine("Opção inválida...Pressione enter.");
                         Console.ReadKey();
                     }
+
                     Console.Clear();
+
                 } while (true);
 
 
 
-                if (int.Parse(op) > 0 && int.Parse(op) < 9)
+                if (int.Parse(op) > 0 && int.Parse(op) < 5)
                 {
-                    Console.WriteLine("Informe um número: ");
-                    n1 = double.Parse(Console.ReadLine());
-                    Console.WriteLine("Informe outro número: ");
-                    n2 = double.Parse(Console.ReadLine());
+
+                    do
+                    {
+                        Console.WriteLine("Informe um número: ");
+
+                        if (Regex.IsMatch(op, @"^[0-9]+$"))
+                        {
+                            n1 = double.Parse(Console.ReadLine());
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Opção inválida...Pressione enter.");
+                            Console.ReadKey();
+                        }
+
+                        Console.Clear();
+
+                    } while (true);
+
+                    do
+                    {
+                        Console.WriteLine("Informe outro número: ");
+
+                        if (Regex.IsMatch(op, @"^[0-9]+$"))
+                        {
+                            n1 = double.Parse(Console.ReadLine());
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Opção inválida...Pressione enter.");
+                            Console.ReadKey();
+                        }
+
+                        Console.Clear();
+
+                    } while (true);
                 }
 
                 switch (int.Parse(op))
@@ -67,27 +101,14 @@ namespace Calculadora
                     case 4:
                         Console.WriteLine($"{n1.ToString("n")} ÷ {n2.ToString("n")} = {(n1 / n2).ToString("n")}");
                         break;
-                    case 5:
-                        Console.WriteLine($"{n1.ToString("n")} ^ {n2.ToString("n")} = {Math.Pow(n1, n2).ToString("n")}");
-                        break;
-                    case 6:
-                        Console.WriteLine($"√{n1.ToString("n")} = {Math.Sqrt(n1).ToString("n")}\n√{n2.ToString("n")} = {Math.Sqrt(n2).ToString("n")}");
-                        break;
-                    case 7:
-                        Console.WriteLine($"{n1.ToString("n")} : {n2.ToString("n")} = {(n1 % n2).ToString("n")}");
-                        break;
-                    case 8:
-                        Console.WriteLine($"{n1.ToString("n")} % de {n2.ToString("n")} = {(n1 / 100 * n2).ToString("n")}");
-                        break;
-                    case 9:
-                        Console.WriteLine("Saindo...");
-                        break;
                     default:
-                        Console.WriteLine("Opção inválida!Digite novamente");                        
+                        Console.WriteLine("Opção inválida!Digite novamente");
                         break;
                 }
+
                 Console.ReadKey();
                 Console.Clear();
+
             } while (int.Parse(op) != 9);
         }
     }
