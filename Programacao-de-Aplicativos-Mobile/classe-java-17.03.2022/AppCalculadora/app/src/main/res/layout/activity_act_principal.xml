@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/txtTitulo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActPrincipal">
+
+    <LinearLayout
+        android:id="@+id/llTop"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:background="@color/cor_titulo"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCenter"
+        android:layout_width="0dp"
+        android:layout_height="305dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:gravity="center_horizontal|fill_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/llBot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTop">
+
+        <TextView
+            android:id="@+id/txtAnoAtual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ano Atual"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/lbAnoAtual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Digite o ano atual"
+            android:inputType="textPersonName"
+            android:textSize="24sp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/txtAnoNasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ano Nascimento"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/lbAnoNasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Digite o ano de nascimento"
+            android:inputType="textPersonName"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtIdade"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:gravity="center"
+            android:text="Idade"
+            android:textSize="34sp" />
+
+        <Button
+            android:id="@+id/btnEnvio"
+            android:layout_width="195dp"
+            android:layout_height="61dp"
+            android:onClick="calcularIdade"
+            android:text="CALCULAR"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBot"
+        android:layout_width="422dp"
+        android:layout_height="88dp"
+        android:background="@color/cor_rodape"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
