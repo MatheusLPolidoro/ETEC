@@ -60,7 +60,7 @@
     <form action="recebe.php" method="post">
         <span>Informe o valor a ser convertido</span>
         <br><br>
-        <input type="number" name="medida" step="any" require="required">
+        <input type="number" name="medida" step="any" required>
         <br><br>
         <input class="botao" type="submit" value="Calcular">
     </form>
