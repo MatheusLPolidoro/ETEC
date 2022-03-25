@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actImage">
+
+    <ImageView
+        android:id="@+id/imImage"
+        android:layout_width="295dp"
+        android:layout_height="172dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="65dp"
+        android:rotationY="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title"
+        app:srcCompat="@drawable/school_draw" />
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="148dp"
+        android:text="App Imagem"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnChange"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="106dp"
+        android:onClick="changeImage"
+        android:text="Trocar Imagem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imImage" />
+
+    <Button
+        android:id="@+id/btnRotation"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="106dp"
+        android:onClick="imageRotate"
+        android:text="ROTAÇÃO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnChange" />
+
+    <Button
+        android:id="@+id/btnCenterImg"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="106dp"
+        android:onClick="ImageCenter"
+        android:text="CENTRALIZAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRotation" />
+
+    <Button
+        android:id="@+id/btnAnimationL"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:text="ANIMAÇÃO + 360"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCenterImg" />
+
+    <Button
+        android:id="@+id/btnAnimationR"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp"
+        android:text="ANIMAÇÃO - 360"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCenterImg" />
+</androidx.constraintlayout.widget.ConstraintLayout>
