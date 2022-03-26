@@ -46,7 +46,7 @@ ranavan char(9) not null unique,
 modelo varchar(30), 
 marca varchar(30),
 cnh char(11) not null,
-constraint fkCnh foreign key (cnh)
+constraint fkCliente foreign key (cnh)
 references cliente (cnh)
 );
 
@@ -55,8 +55,8 @@ create table if not exists veiculoPesado(
 comprimentoMetro decimal(4, 2) not null,
 eixo int not null,
 tonelada decimal(5, 2) not null,
-placa char(7) not null unique,
-constraint fkPlaca foreign key (placa)
+placa char(7) not null primary key,
+constraint fkVeiculo foreign key (placa)
 references veiculo (placa)
 );
 
