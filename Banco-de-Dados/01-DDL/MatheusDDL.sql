@@ -28,14 +28,14 @@ endereco varchar(100) not null,
 celular char(9),
 cpf char(11) not null unique,
 crea char(5) not null primary key
-);
+)Engine = InnoDB;
 
 create table if not exists cliente(
 nome varchar(30) not null,
 endereco varchar(100) not null,
 telefone char(11),
 cnh char(11) not null primary key
-);
+)Engine = InnoDB;
 
 -- relacionamento de veiculo e veiculo pesado 1 : 1
 -- tabela generalista
@@ -48,7 +48,7 @@ marca varchar(30),
 cnh char(11) not null,
 constraint fkCliente foreign key (cnh)
 references cliente (cnh)
-);
+)Engine = InnoDB;
 
 -- tabela especialista
 create table if not exists veiculoPesado(
@@ -58,7 +58,7 @@ tonelada decimal(5, 2) not null,
 placa char(7) not null primary key,
 constraint fkVeiculo foreign key (placa)
 references veiculo (placa)
-);
+)Engine = InnoDB;
 
 create table if not exists revisa(
 idRevisao int auto_increment not null primary key,
@@ -68,7 +68,7 @@ relatorio varchar(100),
 placa char(7) not null,
 crea char(5) not null,    
 index (dataRevisao)
-);
+)Engine = InnoDB;
 
 alter table revisa add constraint fkVeiculoRevisa foreign key (placa) references veiculo (placa);
 alter table revisa add constraint fkMecanicoRevisa foreign key(crea) references mecanico (crea);
