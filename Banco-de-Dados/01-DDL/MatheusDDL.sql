@@ -70,5 +70,5 @@ crea char(5) not null,
 index (dataRevisao)
 );
 
-alter table revisa add constraint fkVeiculo_2 foreign key (placa) references veiculo (placa);
-alter table revisa add constraint fkMecanico foreign key(crea) references mecanico (crea);
+alter table revisa add constraint fkVeiculoRevisa foreign key (placa) references veiculo (placa);
+alter table revisa add constraint fkMecanicoRevisa foreign key(crea) references mecanico (crea);
