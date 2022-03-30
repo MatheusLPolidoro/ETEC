@@ -1,15 +1,21 @@
 <?php
-// Recebendo valores
-$n1 = $_POST["nota1"];
-$n2 = $_POST["nota2"];
-$n3 = $_POST["nota3"];
-$n4 = $_POST["nota4"];
+$primeiro = $_POST['primeiro'];
+$segunda = $_POST['segunda'];
+$terceira = $_POST['terceira'];
+$quarta = $_POST['quarta'];
 
-//calculando a média
+$media = ($primeiro + $segunda + $terceira + $quarta) / 4;
 
-$media = ($n1 + $n2 + $n3 + $n4) / 4;
+echo "Sua média é: ".$media;
 
-// mostrando a média
-echo "<strong>Sua média é de: " . number_format($media, 2, ",", ".") ."</strong>";
+if($media < 5){
+    echo "<br>Situação: Reprovado ";
+}
+elseif($media > 6){
+    echo "<br>Situação: Aprovado ";
+}
+else{
+    echo "<br>Situação: Recuperação ";
+}
 
 ?>
