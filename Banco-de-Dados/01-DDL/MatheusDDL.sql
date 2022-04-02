@@ -42,7 +42,7 @@ cnh char(11) not null primary key
 create table if not exists veiculo(
 placa char(7) not null primary key,
 ano char(4),
-ranavan char(9) not null unique,
+renavan char(9) not null unique,
 modelo varchar(30), 
 marca varchar(30),
 cnh char(11) not null,
