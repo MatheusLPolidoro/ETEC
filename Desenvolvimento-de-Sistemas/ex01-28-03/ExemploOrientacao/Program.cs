@@ -24,6 +24,28 @@ namespace ExemploOrientacao
             Console.WriteLine("E o aluno responde:");
             a.ResponderChamada();
 
+            Console.ReadKey();
+
+            Console.Clear();
+
+            // Instancia do objeto da classe professor
+            Professor p = new Professor();
+
+            Console.WriteLine("Cadastro de professor");
+
+            Console.Write("Nome: ");
+            p.nome = Console.ReadLine();
+
+            Console.Write("Idade: ");
+            p.idade = int.Parse(Console.ReadLine());
+
+            Console.Write("Salário: ");
+            p.salario = double.Parse(Console.ReadLine());
+
+            Console.Write("Formação: ");
+            p.formacao = Console.ReadLine();
+
+
             Console.ReadKey();//Pausa final
         }
     }
