@@ -20,21 +20,25 @@
 
     <EditText
         android:id="@+id/edtValor"
-        android:layout_width="280dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="297dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:gravity="right"
+        android:hint="ENTRADA"
+        android:inputType="number|textPersonName"
         android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtValor"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btnMultiplicar"
         android:layout_width="80dp"
         android:layout_height="60dp"
+        android:onClick="multiplicar"
         android:text="*"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnSubtrair"
@@ -42,38 +46,40 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnSubtrair"
         app:layout_constraintTop_toTopOf="@+id/btnSubtrair"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btnDividir"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:text="/"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnMultiplicar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnMultiplicar"
-        app:layout_constraintTop_toTopOf="@+id/btnMultiplicar"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/btnLimpar"
+        android:id="@+id/btnIgual"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:layout_marginTop="8dp"
-        android:onClick="limpar"
-        android:text="Limpar"
+        android:layout_marginTop="24dp"
+        android:onClick="igual"
+        android:text="="
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIgual" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSubtrair" />
+
+    <Button
+        android:id="@+id/btnSubtrair"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:onClick="subtrair"
+        android:text="-"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSomar"
+        app:layout_constraintEnd_toStartOf="@+id/btnMultiplicar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSomar"
+        app:layout_constraintTop_toTopOf="@+id/btnSomar"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnSomar"
         android:layout_width="80dp"
         android:layout_height="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         android:onClick="somar"
         android:text="+"
         android:textSize="24sp"
@@ -83,59 +89,41 @@
         app:layout_constraintTop_toBottomOf="@+id/edtValor" />
 
     <Button
-        android:id="@+id/btnIgual"
+        android:id="@+id/btnLimpar"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:layout_marginTop="12dp"
-        android:onClick="igual"
-        android:text="="
-        android:textSize="24sp"
+        android:layout_marginTop="20dp"
+        android:onClick="limpar"
+        android:text="Limpar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSubtrair" />
+        app:layout_constraintTop_toBottomOf="@+id/btnIgual" />
 
     <Button
-        android:id="@+id/btnSubtrair"
+        android:id="@+id/btnDividir"
         android:layout_width="80dp"
         android:layout_height="60dp"
-        android:text="-"
+        android:onClick="dividir"
+        android:text="/"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnSomar"
-        app:layout_constraintEnd_toStartOf="@+id/btnMultiplicar"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMultiplicar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnSomar"
-        app:layout_constraintTop_toTopOf="@+id/btnSomar"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/txtValor"
-        android:layout_width="47dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="8dp"
-        android:text="Valor"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
-
-    <TextView
-        android:id="@+id/txtTituloResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="27dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="12dp"
-        android:text="Resultado"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+        app:layout_constraintStart_toEndOf="@+id/btnMultiplicar"
+        app:layout_constraintTop_toTopOf="@+id/btnMultiplicar"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtResultado"
-        android:layout_width="278dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="306dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="72dp"
+        android:gravity="right"
+        android:hint="RESULTADO"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTituloResultado" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
