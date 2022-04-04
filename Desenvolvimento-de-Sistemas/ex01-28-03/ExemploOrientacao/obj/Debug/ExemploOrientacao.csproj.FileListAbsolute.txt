@@ -1,0 +1,7 @@
+C:\Users\Paulo\source\repos\DS 1 SEM 2022\ExemploOrientacao\ExemploOrientacao\bin\Debug\ExemploOrientacao.exe.config
+C:\Users\Paulo\source\repos\DS 1 SEM 2022\ExemploOrientacao\ExemploOrientacao\bin\Debug\ExemploOrientacao.exe
+C:\Users\Paulo\source\repos\DS 1 SEM 2022\ExemploOrientacao\ExemploOrientacao\bin\Debug\ExemploOrientacao.pdb
+C:\Users\Paulo\source\repos\DS 1 SEM 2022\ExemploOrientacao\ExemploOrientacao\obj\Debug\ExemploOrientacao.csprojAssemblyReference.cache
+C:\Users\Paulo\source\repos\DS 1 SEM 2022\ExemploOrientacao\ExemploOrientacao\obj\Debug\ExemploOrientacao.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\source\repos\DS 1 SEM 2022\ExemploOrientacao\ExemploOrientacao\obj\Debug\ExemploOrientacao.exe
+C:\Users\Paulo\source\repos\DS 1 SEM 2022\ExemploOrientacao\ExemploOrientacao\obj\Debug\ExemploOrientacao.pdb
