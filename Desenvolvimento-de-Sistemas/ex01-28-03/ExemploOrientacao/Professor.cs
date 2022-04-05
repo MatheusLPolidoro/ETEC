@@ -10,17 +10,66 @@ namespace ExemploOrientacao
     {
         //Atributos (Caracteristicas)
 
-        public string nome;
-        public int idade;
-        public double salario;
-        public string formacao;
+        private string nome;
+        private int idade;
+        private double salario;
+        private string formacao;
+
+        // Atributo privado + Medoto de acesso publico → Propriedade
+
+        public string Nome
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
+
+        public int Idade
+        {
+            get { return idade; }
+            set 
+            { 
+                if (value > 0)
+                {
+                    idade = value;
+                }
+                else
+                {
+                    idade = 0;
+                }
+                 
+            }
+        }
+
+        public double Salario
+        {
+            get { return salario; }
+            set 
+            {
+                if (value > 0)
+                {
+                    salario = value;
+                }
+                else
+                {
+                    salario = 0;
+                }
+
+            }
+        }
+
+        public string Formacao
+        {
+            get { return formacao; }
+            set { formacao = value; }
+        }
 
         public void ExibirDados()
         {
-            Console.WriteLine("NOME → " + nome);
-            Console.WriteLine("IDADE → " + idade);
-            Console.WriteLine("SALARIO → " + salario);
-            Console.WriteLine("FORMAÇÃO → " + formacao);
+            Console.WriteLine("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ DADOS ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
+            Console.WriteLine("NOME → "         + nome);
+            Console.WriteLine("IDADE → "        + idade);
+            Console.WriteLine("SALARIO → R$ "   + salario);
+            Console.WriteLine("FORMAÇÃO → "     + formacao);
         }
     }
 }

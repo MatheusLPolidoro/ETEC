@@ -6,3 +6,11 @@ C:\Users\Etec Franco da Rocha\Desktop\ExemploOrientacao\ExemploOrientacao\bin\De
 C:\Users\Etec Franco da Rocha\Desktop\ExemploOrientacao\ExemploOrientacao\bin\Debug\ExemploOrientacao.pdb
 C:\Users\Etec Franco da Rocha\Desktop\ExemploOrientacao\ExemploOrientacao\obj\Debug\ExemploOrientacao.exe
 C:\Users\Etec Franco da Rocha\Desktop\ExemploOrientacao\ExemploOrientacao\obj\Debug\ExemploOrientacao.pdb
+C:\Users\Etec Franco da Rocha\Desktop\ETEC\Desenvolvimento-de-Sistemas\ex01-28-03\ExemploOrientacao\bin\Debug\ExemploOrientacao.exe.config
+C:\Users\Etec Franco da Rocha\Desktop\ETEC\Desenvolvimento-de-Sistemas\ex01-28-03\ExemploOrientacao\bin\Debug\ExemploOrientacao.exe
+C:\Users\Etec Franco da Rocha\Desktop\ETEC\Desenvolvimento-de-Sistemas\ex01-28-03\ExemploOrientacao\bin\Debug\ExemploOrientacao.pdb
+C:\Users\Etec Franco da Rocha\Desktop\ETEC\Desenvolvimento-de-Sistemas\ex01-28-03\ExemploOrientacao\obj\Debug\ExemploOrientacao.csproj.AssemblyReference.cache
+C:\Users\Etec Franco da Rocha\Desktop\ETEC\Desenvolvimento-de-Sistemas\ex01-28-03\ExemploOrientacao\obj\Debug\ExemploOrientacao.csproj.SuggestedBindingRedirects.cache
+C:\Users\Etec Franco da Rocha\Desktop\ETEC\Desenvolvimento-de-Sistemas\ex01-28-03\ExemploOrientacao\obj\Debug\ExemploOrientacao.csproj.CoreCompileInputs.cache
+C:\Users\Etec Franco da Rocha\Desktop\ETEC\Desenvolvimento-de-Sistemas\ex01-28-03\ExemploOrientacao\obj\Debug\ExemploOrientacao.exe
+C:\Users\Etec Franco da Rocha\Desktop\ETEC\Desenvolvimento-de-Sistemas\ex01-28-03\ExemploOrientacao\obj\Debug\ExemploOrientacao.pdb

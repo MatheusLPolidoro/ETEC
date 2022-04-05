@@ -10,9 +10,37 @@ namespace ExemploOrientacao
     {
         //Atributos (Caracteristicas)
 
-        public string nome;
-        public int idade;
-        public string curso;
+        private string nome;
+        private int idade;
+        private string curso;
+
+        public string Nome
+        {
+            get { return nome; }
+            set { nome = value.ToUpper(); }    
+        }
+
+        public int Idade 
+        {
+            get{ return idade; }
+            set 
+            {
+                if (value > 0)
+                {
+                    idade = value;
+                }
+                else
+                {
+                    idade = 0;
+                }
+            }
+        }
+
+        public string Curso
+        {
+            get { return curso; }
+            set { curso = value; }
+        }
 
         //Metodos (Acoes)
         public void ResponderChamada()

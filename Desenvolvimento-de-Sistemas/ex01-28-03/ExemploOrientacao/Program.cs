@@ -16,10 +16,10 @@ namespace ExemploOrientacao
             Aluno a = new Aluno();
 
             Console.Write("Informe o nome do aluno: ");
-            a.nome = Console.ReadLine();
+            a.Nome = Console.ReadLine();
 
             Console.WriteLine("O professor chama: ");
-            Console.WriteLine(a.nome + " esta presente ?!");
+            Console.WriteLine(a.Nome + " esta presente ?!");
 
             Console.WriteLine("E o aluno responde:");
             a.ResponderChamada();
@@ -34,17 +34,20 @@ namespace ExemploOrientacao
             Console.WriteLine("Cadastro de professor");
 
             Console.Write("Nome: ");
-            p.nome = Console.ReadLine();
+            p.Nome = Console.ReadLine();
 
             Console.Write("Idade: ");
-            p.idade = int.Parse(Console.ReadLine());
+            p.Idade = int.Parse(Console.ReadLine());
 
             Console.Write("Salário: ");
-            p.salario = double.Parse(Console.ReadLine());
+            p.Salario = double.Parse(Console.ReadLine());
 
             Console.Write("Formação: ");
-            p.formacao = Console.ReadLine();
+            p.Formacao = Console.ReadLine();
 
+            Console.ReadKey();
+
+            p.ExibirDados();
 
             Console.ReadKey();//Pausa final
         }
