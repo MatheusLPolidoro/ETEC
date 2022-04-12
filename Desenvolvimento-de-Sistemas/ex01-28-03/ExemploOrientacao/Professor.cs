@@ -6,39 +6,12 @@ using System.Threading.Tasks;
 
 namespace ExemploOrientacao
 {
-    internal class Professor
+    class Professor : Pessoa
     {
         //Atributos (Caracteristicas)
 
-        private string nome;
-        private int idade;
         private double salario;
         private string formacao;
-
-        // Atributo privado + Medoto de acesso publico → Propriedade
-
-        public string Nome
-        {
-            get { return nome; }
-            set { nome = value; }
-        }
-
-        public int Idade
-        {
-            get { return idade; }
-            set 
-            { 
-                if (value > 0)
-                {
-                    idade = value;
-                }
-                else
-                {
-                    idade = 0;
-                }
-                 
-            }
-        }
 
         public double Salario
         {
@@ -63,13 +36,27 @@ namespace ExemploOrientacao
             set { formacao = value; }
         }
 
-        public void ExibirDados()
+        public string ExibirDados()
         {
-            Console.WriteLine("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ DADOS ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
-            Console.WriteLine("NOME → "         + nome);
-            Console.WriteLine("IDADE → "        + idade);
-            Console.WriteLine("SALARIO → R$ "   + salario);
-            Console.WriteLine("FORMAÇÃO → "     + formacao);
+            string dados;
+
+            dados =  "NOME → "           + nome;
+            dados += "\nIDADE → "        + idade;
+            dados += "\nSALARIO → R$ "   + salario;
+            dados += "\nFORMAÇÃO → "     + formacao;
+
+            return dados;
         }
+
+        private int AnoNascimento()
+        {
+            int anoNascimento;
+
+            anoNascimento = 2022 - idade;
+            
+            return anoNascimento;
+        }
+
+
     }
 }

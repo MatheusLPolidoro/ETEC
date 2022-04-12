@@ -47,7 +47,8 @@ namespace ExemploOrientacao
 
             Console.ReadKey();
 
-            p.ExibirDados();
+            Console.WriteLine("▬▬▬ DADOS ▬▬▬");
+            Console.WriteLine(p.ExibirDados());
 
             Console.ReadKey();//Pausa final
         }
