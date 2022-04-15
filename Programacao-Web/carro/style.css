@@ -62,7 +62,7 @@ span {
     text-decoration: none;
     display: inline-block;
     transition: all ease .2s;
-    width: 75%px
+    width: 75px;
 }
 
 select, input {
