@@ -7,35 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <a class="voltar" href="index.php">&#8617;</a>
     <h1>EXERCÍCIO 2</h1>
-    <p>Programa que exibe todos os números de 1 a 100 e destaca os múltipos de <strong>10</strong></p>
+    <p>Programa que exibe todos os números de 1 a 100 e destaca os múltiplos de <strong>10</strong></p>
     <hr>
     <table>
         <?php
             $coluna = 1;
             for ($i = 1; $i <= 100; $i++)
             {
-                if ($i % 10 == 0)
-                {
-                    echo "<td class='destaque'>MÚLTIPLO DE 10 →</td>";
-                    echo "<td class='destaque'><strong>".str_pad($i, 3, '0', STR_PAD_LEFT)."</strong></td>";
-                } 
-                else{
-                    echo "<td></td>";
-                    echo "<td>".str_pad($i, 3, '0', STR_PAD_LEFT)."</td>";
-                }
 
-                if ($coluna == 5)
+                if ($coluna == 10)
                 {
-                    echo "<tr>&nbsp</tr>";
+                    echo "<td class='destaque'>MÚLTIPLO&nbsp;DE&nbsp;10&#x27A1;</td>";
+                    echo "<td class='destaque'><strong>".str_pad($i, 3, '0', STR_PAD_LEFT)."</strong></td>";
+                    echo "<tr></tr>";
                     $coluna = 0;
+                }
+                else
+                {
+                    echo "<td>".str_pad($i, 3, '0', STR_PAD_LEFT)."</td>";
                 }
 
                 $coluna ++;
             }
-        
         ?>
     </table>
 </body>

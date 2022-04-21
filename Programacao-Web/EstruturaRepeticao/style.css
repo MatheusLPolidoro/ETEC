@@ -1,17 +1,25 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
+    margin: 0 auto; 
+    cursor: default;
 }
 
 body {
-    margin: 50 auto;
     text-align: center;
 }
 
 h1 {
+    padding: 25px;
     color: #4CAF50;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
+    font-size: 45px;
+}
+
+h2 {
+    padding: 25px;
+    color: #4CAF50;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 a{
@@ -24,9 +32,9 @@ a{
 }
 
 a:hover{
-    font-size: 29px;
     color: #8b0663;
     transition: all ease 0.2s;
+    cursor: pointer;
 }
 
 p{
@@ -36,31 +44,8 @@ p{
 }
 
 strong{
-    text-decoration-line: none;
-    font-size: 25px;
-    color: #ec510a;;
-}
-
-.valor{
-    font-size: 27px;
-    color: #e08823;
-    padding: 50px;
-}
-
-.voltar{
-    display: flex;
-    position: absolute;
-    text-decoration-line: none;
-    font-size: 70px;
-    color: #4CAF50;;
-}
-
-.voltar:hover{
-    display: flex;
-    position: absolute;
-    text-decoration-line: none;
-    font-size: 70px;
-    color: #0b669b;;
+    color: #ec510a;
+    font-size: 22px;
 }
 
 hr{
@@ -68,18 +53,77 @@ hr{
 }
 
 table {
-    width: 30%;
-    margin: 0 35% 0 35%;
-    border: 3px solid;
+    width: 50%;
+    margin: auto;
     border-color: #4CAF50;
     border-radius: 10px;
+    color: #8df290;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border-style: none;
 }
 
 td{
     color: #067c8b;
     font-size: 22px;
+    padding: 2px 5px 2px 5px;
+    border-spacing: 0px;
+    border-collapse: collapse;
 }
+
 
 .destaque{
     color: #8b0663;
+}
+
+.voltar, .voltar:hover{
+    display: flex;
+    position: absolute;
+    text-decoration-line: none;
+    font-size: 70px;
+    color: #4CAF50;;
+}
+
+form {
+    margin: auto;
+    width: 20%;
+    padding: 2%;
+    border-style: solid;
+    border-color: #4CAF50;
+    border-radius: 10px;
+    transition: all ease .2s;
+}
+
+form:hover {
+    border-color: #4C50AF;
+    transition: all ease .2s;
+    margin: auto;
+}
+
+form textarea { 
+    vertical-align: top; 
+}
+
+input, textarea{
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.botao {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: all ease .2s;
+    width: 150px;
+    margin: 0;
+}
+
+.botao:hover {
+    background-color: #4C50AF;
+    transition: all ease .2s;
 }
