@@ -8,21 +8,7 @@
 </head>
 <style>
     table {
-        width: 10px;
-    }
-    
-    table tr {
-    border-collapse: collapse;
-    background: #FFFFF0;
-    }
-
-    table tr:nth-child(even) {
-        background: #8df290;
-    }
-
-    table tr:hover {
-        background: #207323;
-        color: #FFFFF0;
+        width: 50%;
     }
 </style>
 <body>
@@ -37,21 +23,21 @@
             echo "<tr>";
             if ((!($i % 3) && !($i % 5)))
             {
-                echo "<td>FizzBuzz</td><td>$i</td>";
+                echo "<td>FizzBuzz</td>";
             }
             elseif (!($i % 3))
             {
-                echo "<td>Fizz</td><td>$i</td>";
+                echo "<td>Fizz</td>";
             }
             elseif (!($i % 5))
             {
-                echo "<td>Buzz</td><td>$i</td>";
+                echo "<td>Buzz</td>";
             }
             else
             {
-                echo "<td></td><td>$i</td>";
+                echo "<td></td>";
             }
-            echo "</tr>";
+            echo "<td>" . str_pad($i, 3, '0', STR_PAD_LEFT) . "</td></tr>";
         }
     ?>
     </table>

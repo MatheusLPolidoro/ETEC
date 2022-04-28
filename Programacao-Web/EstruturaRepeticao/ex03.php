@@ -12,9 +12,9 @@
     <p>Programa que <strong>REPETE</strong> frases conforme o preenchimento do formulario</p>
     <hr>
     <form method="POST" action="">
-        <label for="frase">Frase: </label>
-        <textarea name="frase" cols="30" rows="2" autofocus="true" value="" required></textarea>
-        <label for="qtd">Quantidade: </label>
+        <label for="frase">Frase:</label>
+        <textarea name="frase" cols="30" rows="2" autofocus="true" required></textarea>
+        <label for="qtd">Quantidade:</label>
         <input type="number" name="qtd" min="1" value="" required>
         <br>
         <input type="submit" class="botao" value="Executar">

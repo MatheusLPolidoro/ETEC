@@ -20,11 +20,11 @@
         font-size: 15px;
         width: 20px;
         height: 20px;
-        top: calc(-50%);
-        left: calc(-15%);
+        top: calc(-15%);
+        left: calc(-5%);
         content: attr(data-tooltip);
         white-space: nowrap;
-        background-color: #00ff2a;
+        background-color: #00dd2a;
         color: White;
         transition: all ease 0.2s;
     }
@@ -35,30 +35,6 @@
         transition: all ease 0.2s;
     }
 
-    table tr {
-    background: #FFFFF0;
-    border-collapse: collapse;
-    border-style: none;
-    border-spacing: 0px;
-    }
-
-    table tr:nth-child(even) {
-        background: #8df290;
-        border-collapse: collapse;
-    }
-
-    table tr:hover {
-        background: #207323;
-        color: #FFFFF0;
-        border-collapse: collapse;
-    }
-
-    td:hover{
-        background-color: #0095ff;
-        color: White;
-        border-radius: 3px;
-        cursor: pointer;
-    }
 </style>
 <body>
     <a class="voltar" href="index.php">&#8617;</a>
@@ -74,7 +50,7 @@
 
             if (!($i % 9) && !($i % 5))
             {
-                echo "<td data-tooltip='&#x2714'>$i</td>";
+                echo "<td data-tooltip='&#x2714'>" . str_pad($i, 4, '0', STR_PAD_LEFT) . "</td>";
                 if ($coluna == 20)
                 {
                     echo "</tr><tr>";

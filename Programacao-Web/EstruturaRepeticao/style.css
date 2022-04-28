@@ -63,14 +63,38 @@ table {
     border-style: none;
 }
 
+tr {
+    background: #FFFFF0;
+    border-collapse: collapse;
+    border-style: none;
+    border-spacing: 0px;
+}
+
 td{
-    color: #067c8b;
+    color: #076b79;
     font-size: 22px;
-    padding: 2px 5px 2px 5px;
+    padding: 10px 15px 10px 15px;
     border-spacing: 0px;
     border-collapse: collapse;
 }
 
+tr:nth-child(even) {
+    background: #ccffcc;
+    border-collapse: collapse;
+}
+
+tr:hover {
+    background: #200023;
+    color: #FFFFF0;
+    border-collapse: collapse;
+}
+
+td:hover{
+    background-color: #0095ff;
+    color: White;
+    border-radius: 3px;
+    cursor: pointer;
+}
 
 .destaque{
     color: #8b0663;
@@ -113,7 +137,7 @@ input, textarea{
 .botao {
     background-color: #4CAF50;
     border: none;
-    color: white;
+    color: #fff;
     padding: 10px 32px;
     text-align: center;
     text-decoration: none;
@@ -127,3 +151,24 @@ input, textarea{
     background-color: #4C50AF;
     transition: all ease .2s;
 }
+
+.botao-atualizar {
+    background-color: #4CAF50;
+    border: none;
+    color: #ebeff0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: all ease .2s;
+    font-size:  30px;
+    padding: 20px;
+    width: 50%;
+    margin: 0;
+}
+
+.botao-atualizar:hover {
+    background-color: #8387e0;
+    color: #fff;
+    transition: all ease .2s;
+}
+

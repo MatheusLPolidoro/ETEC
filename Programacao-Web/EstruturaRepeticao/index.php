@@ -34,7 +34,7 @@
     <a href="ex02.php" data-tooltip="&#x1F58A; Múltiplos de 10">Exercício 2</a><br>
     <a href="ex03.php" data-tooltip="&#x1F58A; Repetir frase">Exercício 3</a><br>
     <a href="ex04.php" data-tooltip="&#x1F58A; FizzBuzz">Exercício 4</a><br>
-    <a href="ex05.php">Exercício 5</a><br>
-    <a href="ex06.php">Exercício 6</a><br>
+    <a href="ex05.php" data-tooltip="&#x1F58A Tabuada">Exercício 5</a><br>
+    <a href="ex06.php" data-tooltip="&#x1F58A Números Aleatórios">Exercício 6</a><br>
 </body>
 </html>
