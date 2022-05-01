@@ -20,7 +20,7 @@
         <h1>EXERCÍCIO 3</h1>
     </header>
     <div>
-        <p>Programa que <strong>REPETE</strong> frases conforme o preenchimento do formulario</p>
+        <p>Programa que <strong>REPETE</strong> frases conforme o preenchimento do formulário</p>
         <hr>
         <form method="POST" action="">
             <label for="frase">Frase:</label>
