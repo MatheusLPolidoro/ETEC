@@ -41,6 +41,10 @@
     <a href="https://matheuslpolidoro.github.io/ETEC/Programacao-Web/folhas-de-estilo/aula-22-11/">PET SHOW</a><br>
     <img width="300px" src="https://user-images.githubusercontent.com/89528428/143091381-8b27d684-0050-4b5f-9b92-666653480ffd.gif"/>
   </li>
+  <li>
+    <a href="https://etecphp.herokuapp.com/index.php">EXERCÍCIOS LAÇO DE REPETIÇÃO COM PHP</a><br>
+    <img width="300px" src="https://user-images.githubusercontent.com/89528428/166162823-60e85ab1-2224-4a3f-aa59-11fb3c3397d8.gif"/>
+  </li>
  </ul>
 <br>
 <hr>
