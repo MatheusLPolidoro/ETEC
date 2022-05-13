@@ -3,21 +3,24 @@
     <item android:title="Cadastros" android:id="@+id/mniCadastrar">
         <menu>
             <item android:title="Alunos"
-                android:id="mniAlunos">
+                android:id="@+id/mniAlunos">
             </item>
             <item android:title="Professores"
-                android:id="mniProfessores">
+                android:id="@+id/mniProfessores">
             </item>
         </menu>
     </item>
     <item android:title="Relatórios" android:id="@+id/mniRelatorio">
         <menu>
             <item android:title="Alunos"
-                android:id="mniRAlunos">
+                android:id="@+id/mniRAlunos">
             </item>
             <item android:title="Professores"
-                android:id="mniRProfessores">
+                android:id="@+id/mniRProfessores">
             </item>
         </menu>
+    </item>
+    <item android:title="Encerrar App" android:id="@+id/mniSair">
+
     </item>
 </menu>

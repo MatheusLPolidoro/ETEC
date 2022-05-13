@@ -19,6 +19,7 @@ public class actPrincipal extends AppCompatActivity {
         imgSplash = findViewById(R.id.imgSplash);
         imgSplash.animate().setDuration(4000);
         imgSplash.animate().alpha(0.1f).start();
+        imgSplash.animate().scaleX(0.1f).start();
         splashScreen.postDelayed(new Runnable() {
             @Override
             public void run(){
@@ -31,5 +32,4 @@ public class actPrincipal extends AppCompatActivity {
         startActivity(switchLayout);
         finish();
     }
-
 }

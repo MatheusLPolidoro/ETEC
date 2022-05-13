@@ -24,7 +24,7 @@
         android:id="@+id/txtPassword"
         android:layout_width="61dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="40dp"
         android:text="Senha:"
         android:textSize="20sp"
@@ -35,8 +35,8 @@
 
     <EditText
         android:id="@+id/edtUser"
-        android:layout_width="207dp"
-        android:layout_height="42dp"
+        android:layout_width="205dp"
+        android:layout_height="41dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="48dp"
         android:ems="10"
@@ -75,18 +75,15 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="155dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="279dp"
+        android:layout_width="93dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="150dp"
+        android:onClick="validateLogin"
         android:text="Entrar"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPassword"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
