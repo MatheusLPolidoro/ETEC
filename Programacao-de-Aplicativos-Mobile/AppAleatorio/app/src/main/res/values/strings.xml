@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SORTEAR TAREFAS</string>
+    <string name="adicionar_participantes">ADICIONAR PARTICIPANTES</string>
+    <string name="textview">TextView</string>
+    <string name="adicionar_participante">ADICIONAR PARTICIPANTE</string>
+    <string name="adicionar_tarefa">ADICIONAR TAREFA</string>
+    <string name="incluir">INCLUIR</string>
+</resources>
