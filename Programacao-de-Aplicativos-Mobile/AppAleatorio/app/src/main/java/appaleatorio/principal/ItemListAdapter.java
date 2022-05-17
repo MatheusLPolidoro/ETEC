@@ -12,12 +12,12 @@ import java.util.ArrayList;
 
 public class ItemListAdapter extends RecyclerView.Adapter<ItemListViewHolder> {
 
-    private Context context;
-    private ArrayList<ItemList> itens;
+    private final Context context;
+    public ArrayList<ItemList> items;
 
-    public ItemListAdapter(Context context, ArrayList<ItemList> itens) {
+    public ItemListAdapter(Context context, ArrayList<ItemList> items) {
         this.context = context;
-        this.itens = itens;
+        this.items = items;
     }
 
 
@@ -25,18 +25,17 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemListViewHolder> {
     @Override
     public ItemListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false);
-        ItemListViewHolder viewHolder = new ItemListViewHolder(view);
-        return viewHolder;
+        return new ItemListViewHolder(view).linkAdapter(this);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ItemListViewHolder holder, int position) {
-        ItemList itemList = itens.get(position);
+        ItemList itemList = items.get(position);
         holder.nome.setText(itemList.getName());
     }
 
     @Override
     public int getItemCount() {
-        return itens.size();
+        return items.size();
     }
 }

@@ -2,7 +2,7 @@ package appaleatorio.principal;
 
 public class ItemList {
 
-    private String nome;
+    private final String nome;
 
     public ItemList(String nome) {
         this.nome = nome.toUpperCase();
@@ -12,8 +12,4 @@ public class ItemList {
         return nome;
     }
 
-    public void setName(String nome) {
-        this.nome = nome;
-    }
 }
-
