@@ -23,6 +23,7 @@
         tools:cardCornerRadius="12dp">
 
         <LinearLayout
+            android:id="@+id/LinerLay"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
@@ -34,7 +35,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingLeft="20dp"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textColor="#000000" />
 
             <ImageButton
                 android:id="@+id/imgBtnRemove"

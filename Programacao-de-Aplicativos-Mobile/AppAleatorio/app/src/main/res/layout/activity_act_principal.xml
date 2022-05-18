@@ -12,6 +12,7 @@
         android:id="@+id/svMain"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="#F1EEF4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -49,11 +50,12 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:hint="Digite o nome"
+                    android:hint="@string/digite_o_nome"
                     android:inputType="textPersonName"
                     android:minHeight="48dp"
                     android:textColorHint="#757575"
-                    tools:ignore="TextContrastCheck" />
+                    tools:ignore="TextContrastCheck"
+                    android:autofillHints="" />
 
                 <Button
                     android:id="@+id/btnAdd"
@@ -61,13 +63,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="updateParticipants"
-                    android:text="@string/incluir" />
+                    android:text="@string/incluir"
+                    tools:ignore="DuplicateSpeakableTextCheck,UsingOnClickInXml" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvParticpants"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="fill_vertical|end"
                 android:animateLayoutChanges="false"
                 android:animationCache="false"
@@ -79,7 +82,8 @@
                 android:orientation="vertical"
                 android:scrollbars="vertical"
                 app:layout_constraintHeight_max="200dp"
-                app:stackFromEnd="false">
+                app:stackFromEnd="false"
+                tools:ignore="UsingOnClickInXml">
 
 
             </androidx.recyclerview.widget.RecyclerView>
@@ -106,11 +110,12 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:hint="Digite a tarefa"
+                    android:hint="@string/digite_a_tarefa"
                     android:inputType="textPersonName"
                     android:minHeight="48dp"
                     android:textColorHint="#757575"
-                    tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+                    tools:ignore="SpeakableTextPresentCheck,TextContrastCheck"
+                    android:autofillHints="" />
 
                 <Button
                     android:id="@+id/btnAddTask"
@@ -118,14 +123,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="updateTasks"
-                    android:text="@string/incluir" />
+                    android:text="@string/incluir"
+                    tools:ignore="UsingOnClickInXml" />
 
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvTasks"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="0dp"
                 android:layout_marginBottom="40dp"
                 android:layout_weight="1">
 
@@ -136,7 +142,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="updateRandom"
-                android:text="SORTEAR" />
+                android:text="@string/sortear"
+                tools:ignore="UsingOnClickInXml" />
 
             <TextView
                 android:id="@+id/txtResult"
@@ -145,14 +152,14 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="40dp"
                 android:fontFamily="sans-serif-black"
-                android:text="RESULTADO DO SORTEIO"
+                android:text="@string/resultado_do_sorteio"
                 android:textSize="18sp"
                 android:visibility="invisible" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvRandom"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp" />
 
         </LinearLayout>

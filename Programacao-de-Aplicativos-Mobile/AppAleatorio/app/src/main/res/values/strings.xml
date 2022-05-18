@@ -5,4 +5,8 @@
     <string name="adicionar_participante">ADICIONAR PARTICIPANTE</string>
     <string name="adicionar_tarefa">ADICIONAR TAREFA</string>
     <string name="incluir">INCLUIR</string>
+    <string name="digite_o_nome">Digite o nome</string>
+    <string name="sortear">SORTEAR</string>
+    <string name="resultado_do_sorteio">RESULTADO DO SORTEIO</string>
+    <string name="digite_a_tarefa">Digite a tarefa</string>
 </resources>

@@ -16,7 +16,7 @@ public class ItemListViewHolder extends RecyclerView.ViewHolder {
 
         nome = itemView.findViewById(R.id.nome);
         itemView.findViewById(R.id.imgBtnRemove).setOnClickListener(view -> {
-            adapter.items.remove(getAdapterPosition());
+            adapter.itens.remove(getAdapterPosition());
             adapter.notifyItemRemoved(getAdapterPosition());
         });
     }

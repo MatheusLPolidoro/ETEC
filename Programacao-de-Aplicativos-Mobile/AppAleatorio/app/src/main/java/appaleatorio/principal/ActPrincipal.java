@@ -120,10 +120,8 @@ public class ActPrincipal extends AppCompatActivity {
                 cnt++;
             }
             rvResize(itensRandom, rvRandom);
-        } else {
-            itensTasks.clear();
-            adapterRandom = new ItemListAdapter(ActPrincipal.this, itensTasks);
-            rvTasks.setAdapter(adapterTasks);
+        }
+        if (itensTasks.isEmpty() || itensParticipants.isEmpty()) {
             txtResult.setVisibility(View.INVISIBLE);
         }
         adapterRandom = new ItemListAdapter(ActPrincipal.this, itensRandom);
@@ -135,8 +133,6 @@ public class ActPrincipal extends AppCompatActivity {
 
         if (itens.size() > 5) {
             params.height = 75 * 5;
-        }else{
-            params.height = 75 * (itens.size());
         }
     }
 }

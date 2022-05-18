@@ -13,13 +13,12 @@ import java.util.ArrayList;
 public class ItemListAdapter extends RecyclerView.Adapter<ItemListViewHolder> {
 
     private final Context context;
-    public ArrayList<ItemList> items;
+    public ArrayList<ItemList> itens;
 
     public ItemListAdapter(Context context, ArrayList<ItemList> items) {
         this.context = context;
-        this.items = items;
+        this.itens = items;
     }
-
 
     @NonNull
     @Override
@@ -30,12 +29,12 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemListViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ItemListViewHolder holder, int position) {
-        ItemList itemList = items.get(position);
+        ItemList itemList = itens.get(position);
         holder.nome.setText(itemList.getName());
     }
 
     @Override
     public int getItemCount() {
-        return items.size();
+        return itens.size();
     }
 }
