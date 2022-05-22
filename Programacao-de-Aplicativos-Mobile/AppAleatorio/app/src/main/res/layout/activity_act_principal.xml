@@ -12,13 +12,14 @@
         android:id="@+id/svMain"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#F1EEF4"
+        android:background="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck">
 
         <LinearLayout
             android:id="@+id/lyAddParticipants"
@@ -26,27 +27,29 @@
             android:layout_height="wrap_content"
             android:foregroundGravity="center"
             android:gravity="center_horizontal|center_vertical"
-            android:orientation="vertical">
+            android:orientation="vertical">>
 
             <TextView
                 android:id="@+id/txtTitleAddMember"
-                android:layout_width="360dp"
+                android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/adicionar_participante"
+                android:textColor="#313131"
                 android:textSize="18sp" />
 
             <LinearLayout
                 android:id="@+id/lyPlanBtn2"
-                android:layout_width="360dp"
+                android:layout_width="330dp"
                 android:layout_height="84dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
+
                 <EditText
                     android:id="@+id/edtName"
-                    android:layout_width="353dp"
+                    android:layout_width="265dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
@@ -54,59 +57,51 @@
                     android:inputType="textPersonName"
                     android:minHeight="48dp"
                     android:textColorHint="#757575"
-                    tools:ignore="TextContrastCheck"
-                    android:autofillHints="" />
+                    android:textSize="18sp"
+                    tools:ignore="TextContrastCheck" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/btnAdd"
-                    android:layout_width="180dp"
+                    android:layout_width="20dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:backgroundTint="#00FFFFFF"
                     android:onClick="updateParticipants"
-                    android:text="@string/incluir"
-                    tools:ignore="DuplicateSpeakableTextCheck,UsingOnClickInXml" />
+                    app:srcCompat="@drawable/ic_baseline_add_box_24"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvParticpants"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="fill_vertical|end"
-                android:animateLayoutChanges="false"
-                android:animationCache="false"
-                android:clickable="false"
-                android:clipChildren="true"
-                android:clipToPadding="false"
-                android:minHeight="40dp"
-                android:onClick="updateRandom"
-                android:orientation="vertical"
-                android:scrollbars="vertical"
-                app:layout_constraintHeight_max="200dp"
-                app:stackFromEnd="false"
-                tools:ignore="UsingOnClickInXml">
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF" />
 
-
-            </androidx.recyclerview.widget.RecyclerView>
 
             <TextView
                 android:id="@+id/txtTitleAddTask"
-                android:layout_width="360dp"
+                android:layout_width="330dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/adicionar_tarefa"
+                android:textColor="#313131"
                 android:textSize="18sp" />
 
             <LinearLayout
                 android:id="@+id/lyAddTask"
-                android:layout_width="360dp"
+                android:layout_width="330dp"
                 android:layout_height="84dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
+
                 <EditText
                     android:id="@+id/edtTask"
-                    android:layout_width="353dp"
+                    android:layout_width="265dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
@@ -114,28 +109,27 @@
                     android:inputType="textPersonName"
                     android:minHeight="48dp"
                     android:textColorHint="#757575"
-                    tools:ignore="SpeakableTextPresentCheck,TextContrastCheck"
-                    android:autofillHints="" />
+                    android:textSize="18sp"
+                    tools:ignore="TextContrastCheck" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/btnAddTask"
-                    android:layout_width="180dp"
+                    android:layout_width="20dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:backgroundTint="#00FFFFFF"
                     android:onClick="updateTasks"
-                    android:text="@string/incluir"
-                    tools:ignore="UsingOnClickInXml" />
+                    app:srcCompat="@drawable/ic_baseline_add_box_24"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvTasks"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginBottom="40dp"
-                android:layout_weight="1">
-
-            </androidx.recyclerview.widget.RecyclerView>
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1" />
 
             <Button
                 android:id="@+id/btnRandom"
@@ -147,12 +141,13 @@
 
             <TextView
                 android:id="@+id/txtResult"
-                android:layout_width="360dp"
+                android:layout_width="330dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="40dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/resultado_do_sorteio"
+                android:textColor="#313131"
                 android:textSize="18sp"
                 android:visibility="invisible" />
 
@@ -163,6 +158,6 @@
                 android:layout_marginBottom="40dp" />
 
         </LinearLayout>
-    </ScrollView>
 
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
