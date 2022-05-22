@@ -1,14 +1,21 @@
 package appaleatorio.principal;
 
+import android.graphics.Color;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.BackgroundColorSpan;
+import android.text.style.ForegroundColorSpan;
+
 public class ItemList {
 
-    private final String nome;
+    private final Spannable nome;
 
     public ItemList(String nome) {
-        this.nome = nome.toUpperCase().trim();
+        Spannable sText = new SpannableString(nome.toUpperCase().trim());
+        sText.setSpan(new ForegroundColorSpan(Color.TRANSPARENT), 0,1,0);
+        this.nome = sText;
     }
-
-    public String getName() {
+    public Spannable getName() {
         return nome;
     }
 

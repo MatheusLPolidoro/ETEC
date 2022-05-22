@@ -3,33 +3,26 @@ package appaleatorio.principal;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
+
 
 public class ActPrincipal extends AppCompatActivity {
 
+    @SuppressLint("StaticFieldLeak")
+    private static View txtResult;
+    private static ArrayList<String> strItensParticipants;
+    private static ArrayList<String> strItensTasks;
+    private static ArrayList<ItemList> itensParticipants, itensTasks, itensRandom;
+    private static RecyclerView rvParticipants, rvTasks, rvRandom;
     private ItemListAdapter adapterParticipants, adapterTasks, adapterRandom;
-    public static ArrayList<ItemList> itensParticipants, itensTasks, itensRandom;
-    public static ArrayList<String> strItensParticipants, strItensTasks, strItensRandom;
-    public static EditText edtName, edtTask;
-    public static RecyclerView rvParticipants, rvTasks, rvRandom;
-    public static TextView txtResult;
-
-    ImageButton btnAddParticipants, btnAddTasks;
-    Button btnRandom;
-
-
-
+    private EditText edtName, edtTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +30,6 @@ public class ActPrincipal extends AppCompatActivity {
         setContentView(R.layout.activity_act_principal);
 
         txtResult = findViewById(R.id.txtResult);
-        btnAddParticipants = findViewById(R.id.btnAdd);
-        btnAddTasks = findViewById(R.id.btnAddTask);
-        btnRandom = findViewById(R.id.btnRandom);
         edtName = findViewById(R.id.edtName);
         edtTask = findViewById(R.id.edtTask);
         rvParticipants = findViewById(R.id.rvParticpants);
@@ -52,17 +42,16 @@ public class ActPrincipal extends AppCompatActivity {
 
         strItensParticipants = new ArrayList<>();
         strItensTasks = new ArrayList<>();
-        strItensRandom = new ArrayList<>();
 
-        adapterParticipants = new ItemListAdapter(ActPrincipal.this, itensParticipants);
-        adapterTasks = new ItemListAdapter(ActPrincipal.this, itensTasks);
+        adapterParticipants = new ItemListAdapter(this, itensParticipants);
+        adapterTasks = new ItemListAdapter(this, itensTasks);
 
-        RecyclerView.LayoutManager layoutManagerParticipants = new LinearLayoutManager(ActPrincipal.this,
-                LinearLayoutManager.VERTICAL, false);
-        RecyclerView.LayoutManager layoutManagerTasks = new LinearLayoutManager(ActPrincipal.this,
-                LinearLayoutManager.VERTICAL, false);
-        RecyclerView.LayoutManager layoutManagerRandom = new LinearLayoutManager(ActPrincipal.this,
-                LinearLayoutManager.VERTICAL, false);
+        RecyclerView.LayoutManager layoutManagerParticipants = new LinearLayoutManager(this,
+                LinearLayoutManager.VERTICAL, true);
+        RecyclerView.LayoutManager layoutManagerTasks = new LinearLayoutManager(this,
+                LinearLayoutManager.VERTICAL, true);
+        RecyclerView.LayoutManager layoutManagerRandom = new LinearLayoutManager(this,
+                LinearLayoutManager.VERTICAL, true);
 
         rvParticipants.setLayoutManager(layoutManagerParticipants);
         rvTasks.setLayoutManager(layoutManagerTasks);
@@ -80,13 +69,13 @@ public class ActPrincipal extends AppCompatActivity {
             return;
         }
 
-        ItemList newItem = new ItemList(edtName.getText().toString());
+        ItemList newItem = new ItemList("P" + edtName.getText().toString());
 
-        if (strItensParticipants.contains(newItem.getName().trim())){
+        if (strItensParticipants.contains(newItem.getName().toString().trim())){
             Toast.makeText(this, "Participante já cadastrado!", Toast.LENGTH_SHORT).show();
             return;
         } else {
-            strItensParticipants.add(edtName.getText().toString().toUpperCase().trim());
+            strItensParticipants.add("P" + edtName.getText().toString().toUpperCase().trim());
         }
 
         if (itensParticipants.size() > 30){
@@ -94,8 +83,8 @@ public class ActPrincipal extends AppCompatActivity {
             return;
         }
 
-        itensParticipants.add(0, newItem);
-        adapterParticipants = new ItemListAdapter(ActPrincipal.this, itensParticipants);
+        itensParticipants.add(newItem);
+        adapterParticipants = new ItemListAdapter(this, itensParticipants);
         rvParticipants.setAdapter(adapterParticipants);
         edtName.setText(null);
         rvResize(itensParticipants, rvParticipants);
@@ -107,14 +96,14 @@ public class ActPrincipal extends AppCompatActivity {
             return;
         }
 
-        ItemList newItem = new ItemList(edtTask.getText().toString());
+        ItemList newItem = new ItemList("T" + edtTask.getText().toString());
 
-        if (strItensTasks.contains(newItem.getName().trim())){
+        if (strItensTasks.contains(newItem.getName().toString().trim())){
             Toast.makeText(this, "Tarefa já cadastrada!", Toast.LENGTH_SHORT).show();
             return;
         }
         else{
-            strItensTasks.add(edtTask.getText().toString().toUpperCase().trim());
+            strItensTasks.add("T" + edtTask.getText().toString().toUpperCase().trim());
         }
 
         if (itensTasks.size() > 30){
@@ -122,7 +111,7 @@ public class ActPrincipal extends AppCompatActivity {
             return;
         }
 
-        itensTasks.add(0, newItem);
+        itensTasks.add(newItem);
         adapterTasks = new ItemListAdapter(ActPrincipal.this, itensTasks);
         rvTasks.setAdapter(adapterTasks);
         edtTask.setText(null);
@@ -169,8 +158,12 @@ public class ActPrincipal extends AppCompatActivity {
             } while (task.contains(iTask));
             task.add(iTask);
 
-            ItemList newItem = new ItemList(itensParticipants.get(iParticipant).getName() +
-                    " / " + itensTasks.get(iTask).getName());
+            ItemList newItem;
+            newItem = new ItemList(
+                    "R" + itensParticipants.get(iParticipant).getName().toString().substring(
+                            1, itensParticipants.get(iParticipant).getName().length()) +
+                    " / " + itensTasks.get(iTask).getName().toString().substring(
+                            1, itensTasks.get(iTask).getName().length()));
 
             itensRandom.add(newItem);
             txtResult.setVisibility(View.VISIBLE);
@@ -195,14 +188,25 @@ public class ActPrincipal extends AppCompatActivity {
 
     }
 
-    public static void removeItemstr(Integer size, ArrayList<String> strItens){
-        for(int i = 0; i < size; i++)
-        {
-            String item = strItens.get(i);
-            if(item.equals(edtName.getText().toString().toUpperCase())) {
-                strItens.remove(i);
-                break;
-            }
+    public static void updateRemove(int rvId, String nome){
+
+        if (nome.charAt(0) == 'P'){
+            strItensParticipants.remove(rvId);
+        }else if(nome.charAt(0) == 'T'){
+            strItensTasks.remove(rvId);
+        }
+
+        rvResize(itensParticipants, rvParticipants);
+        rvResize(itensTasks, rvTasks);
+        rvResize(itensRandom, rvRandom);
+    }
+
+    public static void updateScreen(){
+        if (itensParticipants.isEmpty() ||
+                itensTasks.isEmpty() ||
+                itensRandom.isEmpty()){
+            ActPrincipal.txtResult.setVisibility(View.INVISIBLE);
+            itensRandom.clear();
         }
     }
 }
