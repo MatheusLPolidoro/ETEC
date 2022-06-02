@@ -1,0 +1,32 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    font-size: 18px;
+    cursor: default;
+}
+
+body {
+    background-color: #212121;
+    color: #ffffff;
+}
+
+h2{
+    font-size: 23px;
+}
+
+form {
+    margin-top: 100px;
+    width: 30%;
+    padding: 2%;
+    border: 5px solid #77fb3e;
+    border-radius: 10px;
+    transition: all ease .2s;
+}
+
+form textarea {
+    vertical-align: top;
+}
+
+.navbar-brand, .nav-link{
+    cursor: pointer;
+}
