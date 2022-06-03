@@ -10,16 +10,15 @@ body {
     color: #ffffff;
 }
 
-h2{
+h2 {
     font-size: 23px;
 }
 
 form {
-    margin-top: 100px;
+    margin-top: 20px;
     width: 30%;
     padding: 2%;
-    border: 5px solid #77fb3e;
-    border-radius: 10px;
+    border: 5px solid #11f3ab;
     transition: all ease .2s;
 }
 
@@ -27,6 +26,44 @@ form textarea {
     vertical-align: top;
 }
 
-.navbar-brand, .nav-link{
+.navbar-brand, .nav-link {
     cursor: pointer;
+}
+
+table {
+    margin-top: 50px;
+    width: 20%;
+    border-collapse: collapse;
+}
+
+tr {
+    background: #2e3338;
+    font-weight: bold;
+    border-spacing: 0px;
+}
+
+td {
+    color: #d9fbff;
+    font-size: 18px;
+    font-style: italic;
+    padding: 5px 10px 5px 10px;
+    transition: all ease 0.2s;
+}
+
+tr:nth-child(even) {
+    background: #415641;
+}
+
+tr:hover {
+    background: #11f3ab;
+}
+
+tr:hover td {
+    color: #262626;
+}
+
+td:hover {
+    color: FFFFF0;
+    cursor: pointer;
+    transition: all ease 0.2s;
 }

@@ -17,45 +17,51 @@
 
     include_once 'menu.php';
 
-    $quiz[0][0] =  'Escolha uma sobremesa:';
-    $quiz[0][1] =  'Pudim';
-    $quiz[0][2] =  'Pave';
-    $quiz[0][3] =  'Sorvete';
-    $quiz[0][4] =  'Bolo';
+    $_SESSION["enquete"][0][0] =  'Escolha uma sobremesa:';
+    $_SESSION["enquete"][0][1] =  'Mousses';
+    $_SESSION["enquete"][0][2] =  'Pudins';
+    $_SESSION["enquete"][0][3] =  'Bolos';
+    $_SESSION["enquete"][0][4] =  'Tortas';
+    $_SESSION["enquete"][0][5] =  'Cheesecakes';
+    $_SESSION["enquete"][0][6] =  'Verrines';
+    $_SESSION["enquete"][0][7] =  'Docinhos';
+    $_SESSION["enquete"][0][8] =  'Sorvetes';
+    $_SESSION["enquete"][0][9] =  'Pavês';
+    $_SESSION["enquete"][0][10] =  'Flans';
+    $_SESSION["enquete"][0][11] =  'Panna cottas';
+
     ?>
 
     <form method="POST">
-
         <?php
-        if (!isset($_SESSION["respostas"])) {
-            $_SESSION["respostas"] = array();
-        }
-        foreach ($quiz as &$questao) {
+        foreach ($_SESSION["enquete"] as &$questao) {
             $init = True;
             foreach ($questao as &$opcao) {
+                if (!isset($_SESSION[$opcao])) {
+                    $_SESSION[$opcao] = 0;
+                }
                 if (!$init) {
-                    echo '<div class="custom-control custom-radio">';
-                    echo "<input class='custom-control-input' id='" . $opcao . "' type='radio' name='" . $pergunta . "' value='" . $opcao . "'required>";
-                    echo '<label class="custom-control-label" for="' . $opcao . '">' . $opcao . '</label>';
-                    echo '</div>';
+                    $id = strtolower(str_replace(":", "",str_replace(" ", "-", "$opcao-$resposta")));
+                    echo "<div class='custom-control custom-radio'>";
+                    echo "<input class='custom-control-input' id='$id' type='radio' name='$resposta' value='$opcao' required>";
+                    echo "<label class='custom-control-label' for='$id'>$opcao</label>";
+                    echo "</div>";
                 } else {
-                    $pergunta = str_replace(" ", "_", $opcao);
-                    echo '<h2>' . $opcao . '</h2>';
+                    $resposta = str_replace(" ", "-", $opcao);
+                    echo "<h2>$opcao</h2>";
                     $init = False;
                 }
             }
-            if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-                array_push($_SESSION["respostas"], $_POST[$pergunta]);
-                print_r($_SESSION["respostas"]);
+            if ($_SERVER["REQUEST_METHOD"] === "POST") {
+                $_SESSION[$_POST[$resposta]]++;
             }
-            
+            echo "<br>";
         }
         ?>
         <div class="col text-center">
-            <input type="submit" class="btn text-center btn-success"> 
+            <input type="submit" class="btn text-center btn-success">
         </div>
     </form>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

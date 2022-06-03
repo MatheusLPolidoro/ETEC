@@ -50,7 +50,7 @@
             $_SESSION["logado"] = "etec";
             header("location: index.php");
         } else {
-            echo '<div class="d-flex justify-content-center h-500">';
+            echo '<br><div class="d-flex justify-content-center h-500">';
             echo '<div class="alert alert-warning" role="alert">Usuário ou senha incorretos!</div>';
             echo '</div>';
         }

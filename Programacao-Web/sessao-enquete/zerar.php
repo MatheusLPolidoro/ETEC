@@ -1,5 +1,15 @@
 <?php
     session_start();
-    unset($_SESSION["respostas"]);
-    header("Location:index.php");
+        foreach ($_SESSION["enquete"] as &$questao) {
+        $init = True;
+        foreach ($questao as &$opcao) {
+            if (!$init) {
+                unset($_SESSION[$opcao]);
+            } else {
+                $init = False;
+            }
+        }
+    }
+
+    header("Location:resultado.php");
 ?>

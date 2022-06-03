@@ -13,18 +13,25 @@
 </head>
 
 <body>
-
     <?php
     include_once 'menu.php';
-        if (!isset($_SESSION["respostas"])) {
-        $_SESSION["respostas"] = array();
+    echo "<table>";
+    foreach ($_SESSION["enquete"] as &$questao) {
+        $init = True;
+        foreach ($questao as &$opcao) {
+            if (!isset($_SESSION[$opcao])) {
+                $_SESSION[$opcao] = 0;
+            }
+            if (!$init) {
+                echo "<tr><td>$opcao</td><td>$_SESSION[$opcao]</td></tr>";
+            } else {
+                $init = False;
+            }
+        }
     }
-
-    print_r($_SESSION["respostas"]);
-
-
+    echo "</table>";
     ?>
-
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="Js/jquery-3.6.0.min.js"></script>
