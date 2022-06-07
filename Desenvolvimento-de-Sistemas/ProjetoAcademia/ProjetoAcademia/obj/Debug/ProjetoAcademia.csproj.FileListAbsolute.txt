@@ -10,3 +10,15 @@ C:\Users\Etec Franco da Rocha\Desktop\Nova pasta\ETEC\Desenvolvimento-de-Sistema
 C:\Users\Etec Franco da Rocha\Desktop\Nova pasta\ETEC\Desenvolvimento-de-Sistemas\ProjetoAcademia\ProjetoAcademia\obj\Debug\ProjetoAcademia.exe
 C:\Users\Etec Franco da Rocha\Desktop\Nova pasta\ETEC\Desenvolvimento-de-Sistemas\ProjetoAcademia\ProjetoAcademia\obj\Debug\ProjetoAcademia.pdb
 C:\Users\Etec Franco da Rocha\Desktop\Nova pasta\ETEC\Desenvolvimento-de-Sistemas\ProjetoAcademia\ProjetoAcademia\obj\Debug\ProjetoAcademia.UI.frmAlunos.resources
+C:\Users\Etec Franco da Rocha\Desktop\ETEC-main\Desenvolvimento-de-Sistemas\ProjetoAcademia\ProjetoAcademia\bin\Debug\ProjetoAcademia.exe.config
+C:\Users\Etec Franco da Rocha\Desktop\ETEC-main\Desenvolvimento-de-Sistemas\ProjetoAcademia\ProjetoAcademia\bin\Debug\ProjetoAcademia.exe
+C:\Users\Etec Franco da Rocha\Desktop\ETEC-main\Desenvolvimento-de-Sistemas\ProjetoAcademia\ProjetoAcademia\bin\Debug\ProjetoAcademia.pdb
+C:\Users\Etec Franco da Rocha\Desktop\ETEC-main\Desenvolvimento-de-Sistemas\ProjetoAcademia\ProjetoAcademia\obj\Debug\ProjetoAcademia.csproj.AssemblyReference.cache
+C:\Users\Etec Franco da Rocha\Desktop\ETEC-main\Desenvolvimento-de-Sistemas\ProjetoAcademia\ProjetoAcademia\obj\Debug\ProjetoAcademia.csproj.SuggestedBindingRedirects.cache
+C:\Users\Etec Franco da Rocha\Desktop\ETEC-main\Desenvolvimento-de-Sistemas\ProjetoAcademia\ProjetoAcademia\obj\Debug\ProjetoAcademia.Properties.Resources.resources
+C:\Users\Etec Franco da Rocha\Desktop\ETEC-main\Desenvolvimento-de-Sistemas\ProjetoAcademia\ProjetoAcademia\obj\Debug\ProjetoAcademia.Form1.resources
+C:\Users\Etec Franco da Rocha\Desktop\ETEC-main\Desenvolvimento-de-Sistemas\ProjetoAcademia\ProjetoAcademia\obj\Debug\ProjetoAcademia.UI.frmAlunos.resources
+C:\Users\Etec Franco da Rocha\Desktop\ETEC-main\Desenvolvimento-de-Sistemas\ProjetoAcademia\ProjetoAcademia\obj\Debug\ProjetoAcademia.csproj.GenerateResource.cache
+C:\Users\Etec Franco da Rocha\Desktop\ETEC-main\Desenvolvimento-de-Sistemas\ProjetoAcademia\ProjetoAcademia\obj\Debug\ProjetoAcademia.csproj.CoreCompileInputs.cache
+C:\Users\Etec Franco da Rocha\Desktop\ETEC-main\Desenvolvimento-de-Sistemas\ProjetoAcademia\ProjetoAcademia\obj\Debug\ProjetoAcademia.exe
+C:\Users\Etec Franco da Rocha\Desktop\ETEC-main\Desenvolvimento-de-Sistemas\ProjetoAcademia\ProjetoAcademia\obj\Debug\ProjetoAcademia.pdb

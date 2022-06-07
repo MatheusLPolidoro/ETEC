@@ -12,6 +12,9 @@ namespace ProjetoAcademia.UI
 {
     public partial class frmAlunos : Form
     {
+        BLL.AlunoBLL alunoBLL = new BLL.AlunoBLL();
+        DAL.AlunoDAL alunoDAL = new DAL.AlunoDAL();
+
         public frmAlunos()
         {
             InitializeComponent();
@@ -19,6 +22,18 @@ namespace ProjetoAcademia.UI
 
         private void frmAlunos_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            alunoBLL.Nome           = txtNome.Text;
+            alunoBLL.Cpf            = txtCPF.Text;
+            alunoBLL.Rg             = lblRG.Text;
+            alunoBLL.Email          = txtEmail.Text;
+            alunoBLL.Datanascimento = txtNascimento.Value;
+            alunoDAL.Cadastrar(alunoBLL);
+            MessageBox.Show("DADOS GRAVADOS COM SUCESSO!");
 
         }
     }
