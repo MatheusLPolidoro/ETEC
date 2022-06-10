@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:andoid="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/mniCadastros"
+        android:title="Cadastros">
+        <menu>
+            <item android:id="@+id/mniContatosPessoais"
+                android:title="Contatos Pessoais"></item>
+        </menu>
+    </item>
+    <item andoid:id="@+id/mniRelatorio"
+        android:title="Relatorio">
+        <menu>
+            <item android:id="@+id/mniNavegacao"
+                android:title="Navegação">
+            </item>
+            <item android:id="@+id/mniLista"
+                android:title="Lista">
+            </item>
+        </menu>
+    </item>
+    <item andoid:id="@+id/mniEncerrarApp"
+        android:title="Encerrar App">
+        <menu>
+            <item android:id="@+id/mniSair"
+                android:title="Sair">
+            </item>
+        </menu>
+    </item>
+</menu>
