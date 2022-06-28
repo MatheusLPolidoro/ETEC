@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
+using System.Data; //precisa
+using System.Data.SqlClient;//precisa
 
 namespace ProjetoAcademia.DAL
 {
-    internal class Conexao
+    class Conexao
     {
         SqlConnection con = new SqlConnection(@"Data Source=(local);
                                                 Initial Catalog=BDACADEMIA;
                                                 Integrated Security=True");
+
         public SqlConnection Conectar()
         {
             if (con.State == ConnectionState.Closed)
@@ -27,5 +27,4 @@ namespace ProjetoAcademia.DAL
         }
 
     }
-
 }
