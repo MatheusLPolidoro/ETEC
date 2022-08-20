@@ -47,5 +47,15 @@ let var3 = true
 
 // Exercício 7
 let idade = 17
+if (idade >= 18){
+    console.log('Pode entrar');
+}
 
+// Exercício 8
+const nome = 'Matheus Polidoro';
+if (nome == 'Matheus Polidoro'){
+    console.log(`Saudação ${nome}`);
+}
+
+// Exercício 9
 
